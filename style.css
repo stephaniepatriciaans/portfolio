@@ -179,10 +179,18 @@
     border-radius: .5rem;
   }
 
-  #projects .btn {
+  .projects .btn {
     display: inline-block;
     margin-top: 1rem;
     font-size: 1rem;
+  }
+
+  .projects-page .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1.5rem;
+    margin-block: 2rem;
+    padding: 1rem;
   }
 
 
