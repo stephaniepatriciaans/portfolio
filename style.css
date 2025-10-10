@@ -120,7 +120,10 @@
     padding:1.25rem;
     border-radius:var(--radius);
     box-shadow:var(--shadow);
-    border:1px solid #eef2ff}
+    border:1px solid #eef2ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between}
 
   .card:hover{
     transform:translateY(-4px);
@@ -151,7 +154,30 @@
   .contact-form button {
     align-self: flex-start;
   }
-  
+
+  /* PROJECTS */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1.5rem;
+    margin-block: 2rem;
+    padding: 1rem;
+  }
+
+  .projects article {
+    background: var(--card);
+    border: 1px solid #eef2ff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+  }
+
+  .projects img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: .5rem;
+  }
 
 
   /* FOOTER */
@@ -168,7 +194,8 @@
   footer a{
     color:#fff} 
   
-  /* ===== CV v2 (sidebar layout) ===== */
+
+  /* CV v2 (sidebar layout)  */
   .cv2 { padding: 0; }
   .cv2-wrap{
     width:min(1100px, 95%);
@@ -184,7 +211,7 @@
 
   /* Sidebar */
   .cv2-side{
-    background:#121a33;            /* deep navy like the template */
+    background:#121a33;           
     color:#e9edff;
     padding: 28px 24px 36px;
     display:flex; flex-direction:column; gap:22px;}
@@ -196,7 +223,6 @@
   .cv2-name h1{line-height:1.15;font-size:1.6rem;margin:6px 0 2px}
 
   .cv2-name .role{color:#9fb2ff;font-weight:600}
-
 
   .cv2-block h3{
     text-transform:uppercase; letter-spacing:.8px;

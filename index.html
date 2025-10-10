@@ -23,7 +23,7 @@
     </div>
   </header>
 
-  <!-- HERO / INTRO -->
+  <!-- INTRO -->
   <section id="home" class="hero section bg-0">
     <div class="container hero-content">
       <img src="images/me.png" alt="Stephanie Patricia Anshell" class="profile-img" />
@@ -48,31 +48,71 @@
       <h2>Projects</h2>
       <div class="grid">
 
+        <!-- Home Price Predictions -->
+        <article class="card">
+          <h3>
+            <a href="https://github.com/stephaniepatriciaans/Home_Price_Predictions" target="_blank" rel="noopener">
+              Home Price Predictions → Real Estate ML Pipeline
+            </a>
+          </h3>
+          <p>Predicting U.S. home prices using <b>80k+ housing records</b> from CRMLS & Trestle API.</p>
+          <ul>
+            <li>Built a full <b>machine learning pipeline</b> for residential price prediction.</li>
+            <li>Performed <b>EDA, data cleaning, and feature engineering</b> (log transforms, interaction terms).</li>
+            <li>Tuned <b>Ridge Regression</b> & <b>Random Forest</b> models achieving <b>R² = 0.89</b> and <b>MDAPE ≈ 6%</b>.</li>
+            <li>Created residual plots and feature importance visualizations for interpretability.</li>
+            <li><b>Outcome:</b> Identified top pricing drivers and improved valuation transparency.</li>
+          </ul>
+          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, Matplotlib, NumPy, REST APIs (Trestle/Cotality), Tableau</p>
+        </article>
+        
         <!-- TrueFork -->
         <article class="card">
-          <h3>TrueFork</h3>
-          <p>
-            Full-stack web app analyzing 1M+ recipe reviews using ML & NLP. 
-            Deployed live with GitHub Pages, integrated Yelp API, and reduced decision time by ~50% with review summarization.
-          </p>
+          <h3>
+            <a href="https://github.com/stephaniepatriciaans/TrueFork" target="_blank" rel="noopener">
+              TrueFork → Recipe Ratings & Nutrition Bias Analysis
+            </a>
+          </h3>
+          <p>Analyzing whether healthy recipes are rated differently using <b>1M+ Food.com reviews</b>.</p>
+          <ul>
+            <li>Designed an <b>end-to-end ML pipeline</b> from data ingestion to model interpretation.</li>
+            <li>Engineered features from <b>text sentiment (NLTK/VADER)</b>, ingredient complexity, and nutrition facts.</li>
+            <li>Built predictive models (Linear Regression, Random Forest, Ridge/Lasso) with <b>SHAP explainability</b>.</li>
+            <li><b>Outcome:</b> Found evidence of user bias against low-calorie and low-sugar foods.</li>
+          </ul>
+          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, SHAP, Matplotlib, Seaborn, Jupyter</p>
         </article>
 
         <!-- Loan Charge Offs -->
         <article class="card">
-          <h3>Loan Charge Offs</h3>
-          <p>
-            Built ML models (Random Forest, Logistic Regression, Neural Nets) to classify high-risk loans. 
-            Boosted predictive accuracy by 20%, improving institutional credit risk assessment.
-          </p>
+          <h3>
+            <a href="https://github.com/stephaniepatriciaans/Project-Loan-Charge-Offs" target="_blank" rel="noopener">
+              Project Loan Charge-Offs → Credit Risk Analysis
+            </a>
+          </h3>
+          <p>Predicting loan charge-offs to improve lending decisions.</p>
+          <ul>
+            <li>Engineered <b>DTI ratios, credit score groups, and loan terms</b>.</li>
+            <li>Trained models including <b>Logistic Regression, Decision Trees, Gradient Boosting</b>.</li>
+            <li><b>Outcome:</b> Achieved AUC > 0.80, highlighting top default predictors.</li>
+          </ul>
+          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, XGBoost, Matplotlib</p>
         </article>
 
         <!-- Urban Transit & Crime -->
         <article class="card">
-          <h3>Urban Transit & Crime</h3>
-          <p>
-            Geospatial analysis of 1M+ NYC & Chicago records. 
-            Used GeoPandas/PySAL regression to uncover safety patterns and support urban planning.
-          </p>
+          <h3>
+            <a href="https://github.com/stephaniepatriciaans/Urban-Transit-and-Crime" target="_blank" rel="noopener">
+              Urban Transit & Crime → Geospatial Data Science
+            </a>
+          </h3>
+          <p>Investigating the link between <b>public transit stops</b> and <b>crime rates</b>.</p>
+          <ul>
+            <li>Integrated <b>crime data, transit shapefiles, and census demographics</b>.</li>
+            <li>Applied <b>GeoPandas & PySAL</b> for clustering and regression mapping.</li>
+            <li><b>Outcome:</b> Found statistically significant crime clusters near major transit hubs.</li>
+          </ul>
+          <p class="tech-stack">Tech Stack: Python, GeoPandas, PySAL, Matplotlib, Folium, Jupyter</p>
         </article>
 
         <!-- Bank Failures -->
