@@ -292,6 +292,8 @@
 
 /* ==================== ADD THESE RULES TO YOUR style.css ==================== */
 
+/* ==================== ADD THESE RULES TO YOUR style.css ==================== */
+
 /* Dark Mode Support */
 html {
   color-scheme: light dark;
@@ -321,20 +323,20 @@ nav {
 
 /* Section backgrounds that work in both modes */
 .bg-0 {
-  background: canvas;
+  background: var(--bg-0);
 }
 
 .bg-1 {
-  background: color-mix(in oklch, canvas, var(--primary) 3%);
+  background: var(--bg-1);
 }
 
 .bg-2 {
-  background: color-mix(in oklch, canvas, var(--primary) 5%);
+  background: var(--bg-2);
 }
 
 /* Hero gradient that adapts */
 .hero {
-  background: linear-gradient(180deg, canvas, color-mix(in oklch, canvas, white 5%));
+  background: linear-gradient(180deg, var(--bg-0), #fff);
 }
 
 /* Theme Switcher Styling */
@@ -373,6 +375,18 @@ nav {
 
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #3b5bdb;
+    --ink: #e9ecef;
+    --muted: #adb5bd;
+    --bg: #1a1b1e;
+    --card: #25262b;
+    --ring: #373A40;
+    --bg-0: #1a1b1e;
+    --bg-1: #25262b;
+    --bg-2: #2c2e33;
+  }
+  
   .color-scheme {
     background: oklch(20% 3% 250);
     color: #e9edff;

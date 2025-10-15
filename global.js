@@ -63,7 +63,6 @@ if (nav) {
     a.textContent = title;
     
     // Highlight current page
-    // Compare pathnames more carefully to handle trailing slashes
     let currentPath = location.pathname.replace(/\/$/, '');
     let linkPath = new URL(a.href).pathname.replace(/\/$/, '');
     
@@ -86,10 +85,24 @@ const select = document.querySelector('.color-scheme select');
 
 // Function to set color scheme
 function setColorScheme(colorScheme) {
+  // Set the CSS property
   document.documentElement.style.setProperty('color-scheme', colorScheme);
+  
+  // Add/remove data attribute for CSS targeting
+  if (colorScheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (colorScheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  
+  // Update select value
   if (select) {
     select.value = colorScheme;
   }
+  
+  console.log('Color scheme set to:', colorScheme);
 }
 
 // Load saved preference on page load
@@ -102,7 +115,6 @@ select?.addEventListener('input', function(event) {
   const colorScheme = event.target.value;
   setColorScheme(colorScheme);
   localStorage.colorScheme = colorScheme;
-  console.log('Color scheme changed to:', colorScheme);
 });
 
 // ==================== BETTER CONTACT FORM ====================
