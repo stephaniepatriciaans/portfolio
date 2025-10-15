@@ -418,7 +418,7 @@ nav {
   }
 }
 
-/* Dark mode - Forced (manual selection) */
+
 :root[data-theme="dark"] {
   --primary: #4c6ef5;
   --ink: #e9ecef;
@@ -468,6 +468,20 @@ nav {
 :root[data-theme="dark"] h3,
 :root[data-theme="dark"] .card h3 {
   color: #7c9dff;
+}
+
+:root[data-theme="dark"] .card,
+:root[data-theme="dark"] .projects article {
+  border: 2px solid #4a4d57 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .card,
+  :root:not([data-theme="light"]) .projects article {
+    border: 2px solid #4a4d57 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  }
 }
 
 /* Print-friendly */
