@@ -290,6 +290,8 @@
   .cv2-item p{ 
     margin:.3rem 0 0 }
 
+/* ==================== ADD THESE RULES TO YOUR style.css ==================== */
+
 /* Dark Mode Support */
 html {
   color-scheme: light dark;
@@ -297,14 +299,14 @@ html {
 
 /* Update body background for dark mode */
 body {
-  background: canvas;
-  color: canvastext;
+  background: var(--bg);
+  color: var(--ink);
 }
 
 /* Card backgrounds adapt to dark mode */
 .card {
-  background: canvas;
-  color: canvastext;
+  background: var(--card);
+  color: var(--ink);
 }
 
 /* Update navbar for dark mode - keep your primary color */
@@ -338,7 +340,7 @@ nav {
 /* Theme Switcher Styling */
 .color-scheme {
   position: fixed;
-  top: 4.5rem; 
+  top: 4.5rem; /* Position below navbar */
   right: 1rem;
   font-size: 0.85rem;
   font-family: inherit;
