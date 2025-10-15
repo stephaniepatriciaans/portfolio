@@ -98,6 +98,11 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
   margin-top:0.75rem;
   color:var(--muted);
 }
+:root[data-theme="dark"] .tech-stack,
+:root:not([data-theme="light"]) .tech-stack{
+  color:#cbd5e1;       /* light gray-blue text for dark mode */
+}
+
 .projects img{ width:100%; height:auto; display:block; border-radius:.5rem }
 .projects .btn{ display:inline-block; margin-top:1rem; font-size:1rem }
 .projects-page .projects{
@@ -221,10 +226,6 @@ nav{ --border-color: oklch(50% 10% 200 / 40%); }
 :root[data-theme="dark"] .projects article{
   border:2px solid #4a4d57!important;
   box-shadow:0 4px 12px rgba(0,0,0,.3);
-}
-:root[data-theme="dark"] .tech-stack,
-:root:not([data-theme="light"]) .tech-stack{
-  color:#cbd5e1;      
 }
 
 @media (prefers-color-scheme: dark){
