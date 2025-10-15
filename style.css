@@ -373,10 +373,10 @@ nav {
   outline-offset: 2px;
 }
 
-/* Dark mode adjustments */
+/* Dark mode adjustments - applies when system prefers dark OR when manually selected */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #3b5bdb;
+  :root:not([data-theme="light"]) {
+    --primary: #4c6ef5;
     --ink: #e9ecef;
     --muted: #adb5bd;
     --bg: #1a1b1e;
@@ -387,33 +387,86 @@ nav {
     --bg-2: #2c2e33;
   }
   
-  .color-scheme {
-    background: oklch(20% 3% 250);
-    color: #e9edff;
-    border-color: oklch(30% 5% 250);
+  :root:not([data-theme="light"]) .hero {
+    background: linear-gradient(180deg, #1a1b1e, #25262b);
   }
   
-  .color-scheme select {
-    background: oklch(25% 3% 250);
-    border-color: oklch(35% 5% 250);
+  :root:not([data-theme="light"]) .color-scheme {
+    background: #25262b;
+    color: #e9edff;
+    border-color: #373A40;
+  }
+  
+  :root:not([data-theme="light"]) .color-scheme select {
+    background: #2c2e33;
+    border-color: #373A40;
     color: #e9edff;
   }
   
-  .color-scheme select option {
-    background: oklch(25% 3% 250);
+  :root:not([data-theme="light"]) .color-scheme select option {
+    background: #2c2e33;
     color: #e9edff;
   }
   
-  /* Improve button visibility in dark mode */
-  .btn {
+  :root:not([data-theme="light"]) .btn {
     background: var(--primary);
     color: white;
   }
   
-  /* Profile image border in dark mode */
-  .profile-img {
-    border-color: oklch(30% 5% 250);
+  :root:not([data-theme="light"]) .profile-img {
+    border-color: #373A40;
   }
+  
+  :root:not([data-theme="light"]) .card {
+    border-color: #373A40;
+  }
+}
+
+/* Force dark mode when data-theme="dark" (overrides automatic) */
+:root[data-theme="dark"] {
+  --primary: #4c6ef5;
+  --ink: #e9ecef;
+  --muted: #adb5bd;
+  --bg: #1a1b1e;
+  --card: #25262b;
+  --ring: #373A40;
+  --bg-0: #1a1b1e;
+  --bg-1: #25262b;
+  --bg-2: #2c2e33;
+}
+
+:root[data-theme="dark"] .hero {
+  background: linear-gradient(180deg, #1a1b1e, #25262b);
+}
+
+:root[data-theme="dark"] .color-scheme {
+  background: #25262b;
+  color: #e9edff;
+  border-color: #373A40;
+}
+
+:root[data-theme="dark"] .color-scheme select {
+  background: #2c2e33;
+  border-color: #373A40;
+  color: #e9edff;
+}
+
+:root[data-theme="dark"] .color-scheme select option {
+  background: #2c2e33;
+  color: #e9edff;
+}
+
+:root[data-theme="dark"] .btn {
+  background: var(--primary);
+  color: white;
+}
+
+:root[data-theme="dark"] .profile-img {
+  border-color: #373A40;
+}
+
+:root[data-theme="dark"] .card {
+  border-color: #373A40;
 }
 
 /* Responsive: Move switcher on mobile */
