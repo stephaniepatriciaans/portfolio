@@ -290,6 +290,126 @@
   .cv2-item p{ 
     margin:.3rem 0 0 }
 
+/* Dark Mode Support */
+html {
+  color-scheme: light dark;
+}
+
+/* Update body background for dark mode */
+body {
+  background: canvas;
+  color: canvastext;
+}
+
+/* Card backgrounds adapt to dark mode */
+.card {
+  background: canvas;
+  color: canvastext;
+}
+
+/* Update navbar for dark mode - keep your primary color */
+.navbar {
+  background: var(--primary);
+}
+
+/* Improve border colors for dark mode */
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+}
+
+/* Section backgrounds that work in both modes */
+.bg-0 {
+  background: canvas;
+}
+
+.bg-1 {
+  background: color-mix(in oklch, canvas, var(--primary) 3%);
+}
+
+.bg-2 {
+  background: color-mix(in oklch, canvas, var(--primary) 5%);
+}
+
+/* Hero gradient that adapts */
+.hero {
+  background: linear-gradient(180deg, canvas, color-mix(in oklch, canvas, white 5%));
+}
+
+/* Theme Switcher Styling */
+.color-scheme {
+  position: fixed;
+  top: 4.5rem; 
+  right: 1rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
+  background: var(--card);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #eef2ff;
+}
+
+.color-scheme select {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #d8e0ff;
+  background: #f9fbff;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.color-scheme select:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .color-scheme {
+    background: oklch(20% 3% 250);
+    color: #e9edff;
+    border-color: oklch(30% 5% 250);
+  }
+  
+  .color-scheme select {
+    background: oklch(25% 3% 250);
+    border-color: oklch(35% 5% 250);
+    color: #e9edff;
+  }
+  
+  .color-scheme select option {
+    background: oklch(25% 3% 250);
+    color: #e9edff;
+  }
+  
+  /* Improve button visibility in dark mode */
+  .btn {
+    background: var(--primary);
+    color: white;
+  }
+  
+  /* Profile image border in dark mode */
+  .profile-img {
+    border-color: oklch(30% 5% 250);
+  }
+}
+
+/* Responsive: Move switcher on mobile */
+@media (max-width: 700px) {
+  .color-scheme {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
   /* Print-friendly */
   @media print{
     .navbar, footer{ display:none }
