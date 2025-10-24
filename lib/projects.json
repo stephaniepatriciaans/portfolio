@@ -3,7 +3,7 @@
       "title": "Home Price Predictions → Real Estate ML Pipeline",
       "year": "2023",
       "href": "https://github.com/stephaniepatriciaans/Home_Price_Predictions",
-      "_image": "/images/house_prediction.png",
+      "image": "/images/house_prediction.png",
       "description": "Predicting U.S. home prices using <b>80k+ housing records</b> from CRMLS & Trestle API.",
       "points": [
         "Built a full <b>machine learning pipeline</b> for residential price prediction.",
@@ -36,7 +36,7 @@
       "title": "DSC 80 Project → End-to-End Predictive Modeling",
       "year": "2023",
       "href": "https://github.com/stephaniepatriciaans/DSC-80-Poject",
-      "_image": "/images/dsc80.png",
+      "image": "/images/dsc80.png",
       "description": "Course-based project showcasing the <b>full data science lifecycle</b>.",
       "points": [
         "Defined a research question and selected a dataset for prediction/inference.",

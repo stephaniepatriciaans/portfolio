@@ -69,7 +69,7 @@ select?.addEventListener("input", (event) => {
   let nav = document.querySelector(".navbar nav");
   if (!nav) {
     const header = document.querySelector(".navbar");
-    if (header) {
+    if(header) {
       nav = document.createElement("nav");
       (header.querySelector(".container")?.appendChild(nav)) || header.appendChild(nav);
     }
@@ -160,10 +160,19 @@ export function renderProjects(projects, container, heading = "h2") {
 
     const title = p?.title ?? "Untitled";
     const href  = p?.href || null;
-    const img   = p?.image ?? "/portofolio/images/me.png";
+    
+    let img = p?.image ?? p?._image ?? `${BASE_PATH}images/me.png`;
+    if (typeof img === "string" && img.startsWith("/images/")) {
+      img = `${BASE_PATH}${img.slice(1)}`;
+    } else if (typeof img === "string" && !/^https?:\/\//i.test(img)) {
+      // make relative paths work from anywhere
+      img = `${BASE_PATH}${img.replace(/^\.?\//, "")}`;
+    }
+
     const desc  = p?.description ?? "";
     const pts   = Array.isArray(p?.points) ? p.points : null;
     const stack = p?.stack ?? "";
+
 
     // Title but make sure --> linked if href provided
     const headingMarkup = `<${H}>${title}</${H}>`;

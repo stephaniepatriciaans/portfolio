@@ -1,7 +1,7 @@
-import { fetchJSON, renderProjects, updateProjectCount } from '../global.js';
+import { fetchJSON, renderProjects, updateProjectCount, BASE_PATH } from '../global.js';
 
 (async () => {
-  const container = document.querySelector('.projects');       // target grid
+  const container = document.querySelector('.projects'); // target grid
   const titleEl   = document.querySelector('.projects-title'); // for count
   if (!container) {
     console.warn('[projects.js] .projects container not found');
@@ -9,7 +9,7 @@ import { fetchJSON, renderProjects, updateProjectCount } from '../global.js';
   }
 
   container.innerHTML = '<p class="muted">Loading projects…</p>';
-  const data = await fetchJSON('../lib/projects.json');
+  const data = await fetchJSON(`${BASE_PATH}lib/projects.json`);
 
   if (!Array.isArray(data)) {
     container.innerHTML = `
