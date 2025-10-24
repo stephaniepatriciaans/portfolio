@@ -18,21 +18,13 @@
       padding: 1.5rem;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    .card h3 {
-      margin-bottom: 0.75rem;
-      color: #1e3a8a;
-    }
-    .card ul {
-      margin: 0.5rem 0 1rem 1.25rem;
-    }
-    .tech-stack {
-      font-weight: bold;
-      margin-top: 0.5rem;
-      color: #333;
-    }
+    .card h3 { margin-bottom: 0.75rem; color: #1e3a8a; }
+    .card ul { margin: 0.5rem 0 1rem 1.25rem; }
+    .tech-stack { font-weight: bold; margin-top: 0.5rem; color: #333; }
   </style>
 </head>
 <body>
+  <!-- NAV -->
   <header class="navbar">
     <div class="container">
       <nav>
@@ -47,186 +39,29 @@
     </div>
   </header>
 
+  <!-- MAIN -->
   <section class="section bg-1">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="projects">
+      <!-- Use ONE title + ONE projects container -->
+      <h1 class="projects-title">Projects</h1>
 
-        <!-- Add more cards later (newest to latest) -->
-
-        <!-- Home Price Predictions -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/Home_Price_Predictions" target="_blank" rel="noopener">
-              Home Price Predictions → Real Estate ML Pipeline
-            </a>
-          </h3>
-          <p>Predicting U.S. home prices using <b>80k+ housing records</b> from CRMLS & Trestle API.</p>
-          <ul>
-            <li>Built a full <b>machine learning pipeline</b> for residential price prediction.</li>
-            <li>Performed <b>EDA, data cleaning, and feature engineering</b> (log transforms, interaction terms).</li>
-            <li>Tuned <b>Ridge Regression</b> & <b>Random Forest</b> models achieving <b>R² = 0.89</b> and <b>MDAPE ≈ 6%</b>.</li>
-            <li>Created residual plots and feature importance visualizations for interpretability.</li>
-            <li><b>Outcome:</b> Identified top pricing drivers and improved valuation transparency.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, Matplotlib, NumPy, REST APIs (Trestle/Cotality), Tableau</p>
-        </article>
-
-        <!-- TrueFork -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/TrueFork" target="_blank" rel="noopener">
-              TrueFork → Recipe Ratings & Nutrition Bias Analysis
-            </a>
-          </h3>
-          <p>Analyzing whether healthy recipes are rated differently using <b>1M+ Food.com reviews</b>.</p>
-          <ul>
-            <li>Designed an <b>end-to-end ML pipeline</b> from data ingestion to model interpretation.</li>
-            <li>Cleaned, normalized, and merged nutritional data with user-generated recipe reviews.</li>
-            <li>Engineered features from <b>text sentiment (NLTK/VADER)</b>, ingredient complexity, and nutrition facts.</li>
-            <li>Conducted <b>EDA</b> with visualizations (distributions, scatterplots, residual plots) to explore rating bias patterns.</li>
-            <li>Built predictive models: <b>Linear Regression, Random Forest, and Ridge/Lasso</b>.</li>
-            <li>Applied <b>SHAP interpretability</b> to identify features influencing ratings.</li>
-            <li>Performed fairness testing across nutrition-based subgroups.</li>
-            <li><b>Outcome:</b> Identified bias against healthier recipes that suggesting perception bias users hold on low-calorie/sugar foods.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Pandas, NumPy, Scikit-learn, SHAP, Matplotlib, Seaborn, Jupyter</p>
-        </article>
-
-        <!-- DSC-80 -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/DSC-80-Poject" target="_blank" rel="noopener">
-              DSC 80 Project → End-to-End Predictive Modeling
-            </a>
-          </h3>
-          <p>Course-based project showcasing the <b>full data science lifecycle</b>.</p>
-          <ul>
-            <li>Defined a research question and selected a dataset for prediction/inference.</li>
-            <li>Performed <b>data cleaning, feature scaling, and categorical encoding</b>.</li>
-            <li>Conducted EDA with <b>summary statistics, correlation heatmaps, hypothesis testing</b>.</li>
-            <li>Trained regression and classification models (Logistic Regression, Decision Trees).</li>
-            <li>Evaluated with cross-validation and RMSE/accuracy metrics.</li>
-            <li><b>Outcome:</b> Transparent, reproducible project demonstrating professional workflow.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Babypandas/Pandas, NumPy, Scikit-learn, Matplotlib</p>
-        </article>
-
-        <!-- Urban Transit -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/Urban-Transit-and-Crime" target="_blank" rel="noopener">
-              Urban Transit & Crime → Geospatial Data Science
-            </a>
-          </h3>
-          <p>Investigating the link between <b>public transit stops</b> and <b>crime rates</b>.</p>
-          <ul>
-            <li>Collected and integrated <b>crime data, transit shapefiles, and census demographics</b>.</li>
-            <li>Applied <b>geospatial joins and clustering</b> using GeoPandas & PySAL.</li>
-            <li>Built <b>choropleth maps, heatmaps, cluster visualizations</b>.</li>
-            <li>Tested significance of correlation between transit hubs and crime.</li>
-            <li><b>Outcome:</b> Identified crime clusters near transit zones, useful for city planning.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, GeoPandas, PySAL, Matplotlib, Folium, Jupyter</p>
-        </article>
-
-        <!-- Loan Charge-Offs -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/Project-Loan-Charge-Offs" target="_blank" rel="noopener">
-              Project Loan Charge-Offs → Credit Risk Analysis
-            </a>
-          </h3>
-          <p>Predicting loan charge-offs to improve lending decisions.</p>
-          <ul>
-            <li>Engineered features such as <b>DTI ratios, credit score categories, and loan terms</b>.</li>
-            <li>Trained Logistic Regression, Decision Trees, and Gradient Boosting models.</li>
-            <li>Evaluated with ROC/AUC, confusion matrices, and recall analysis.</li>
-            <li><b>Outcome:</b> Model achieved AUC > 0.80, identifying top 5 predictors of defaults.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, XGBoost, Matplotlib</p>
-        </article>
-
-        <!-- Deep Learning -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/deep-learning-challenge/tree/main" target="_blank" rel="noopener">
-              Deep Learning Challenge → CNN Image Classification
-            </a>
-          </h3>
-          <p>Training neural networks to classify images in a challenge setting.</p>
-          <ul>
-            <li>Built <b>CNN architectures</b> in TensorFlow with data augmentation.</li>
-            <li>Used <b>dropout, batch norm, early stopping</b> to prevent overfitting.</li>
-            <li>Tuned hyperparameters (optimizer, LR, depth).</li>
-            <li><b>Outcome:</b> Achieved >85% accuracy, beating baseline by 15%.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, TensorFlow, NumPy, Matplotlib</p>
-        </article>
-
-        <!-- Credit Risk -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/credit-risk-classification" target="_blank" rel="noopener">
-              Credit Risk Classification → ML for Finance
-            </a>
-          </h3>
-          <p>Classifying borrowers into credit risk tiers.</p>
-          <ul>
-            <li>Addressed class imbalance using SMOTE and class weights.</li>
-            <li>Benchmarked Logistic Regression, Random Forest, XGBoost.</li>
-            <li><b>Outcome:</b> Reduced false negatives by 20%, improving lending safety.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Scikit-learn, XGBoost, Pandas, Matplotlib</p>
-        </article>
-
-        <!-- CryptoClustering -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/CryptoClustering" target="_blank" rel="noopener">
-              CryptoClustering → Market Segmentation
-            </a>
-          </h3>
-          <p>Clustering cryptocurrencies into meaningful groups.</p>
-          <ul>
-            <li>Engineered features: returns, volatility, moving averages.</li>
-            <li>Applied <b>K-Means, DBSCAN, Hierarchical clustering</b>.</li>
-            <li>Identified 3 groups: stablecoins, mid-cap, high-volatility coins.</li>
-            <li><b>Outcome:</b> Helped investors diversify by risk profile.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, Matplotlib, Seaborn</p>
-        </article>
-
-        <!-- Bank Failures -->
-        <article class="card">
-          <h3>
-            <a href="https://github.com/stephaniepatriciaans/Bank-Failures/tree/main/Project_3_Bank-Failures" target="_blank" rel="noopener">
-              Bank Failures → Predicting Institutional Collapse
-            </a>
-          </h3>
-          <p>Forecasting U.S. bank failures with FDIC data.</p>
-          <ul>
-            <li>Engineered ratios: <b>capital adequacy, asset quality, liquidity</b>.</li>
-            <li>Trained Logistic Regression, Random Forest, and ensembles.</li>
-            <li>Visualized risk scores and financial health over time.</li>
-            <li><b>Outcome:</b> Predicted failures with >80% accuracy up to 2 years ahead.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, Matplotlib, Tableau/Seaborn</p>
-        </article>
-
-        <!-- Add more cards later (newest to latest) -->
-
-      </div>
+      <!-- keep this empty; JS will fill it -->
+      <div class="projects grid"></div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container row">
       <p>© <span id="y"></span> Stephanie Patricia Anshell.</p>
       <p><a href="/portofolio/#home">Back to Home ↑</a></p>
     </div>
   </footer>
+
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+  <!-- SCRIPTS: order matters -->
   <script src="../global.js" type="module"></script>
+  <script src="projects.js" type="module" defer></script>
 </body>
 </html>

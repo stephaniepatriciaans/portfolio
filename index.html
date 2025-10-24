@@ -13,6 +13,7 @@
   <header class="navbar">
     <div class="container">
       <nav>
+        <!-- global.js will rebuild these links automatically -->
         <a href="/portofolio/#home">Home</a>
         <a href="/portofolio/#projects">Projects</a>
         <a href="/portofolio/projects/">Projects Page</a>
@@ -36,8 +37,8 @@
           and social impact. Fluent in English and Indonesian.
         </p>
         <div class="actions">
-          <a href="/portofolio/#projects" class="btn">View My Work</a>
-          <a href="/portofolio/projects/" class="btn">Open Projects Page</a>
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="projects/" class="btn">Open Projects Page</a>
         </div>
       </div>
     </div>
@@ -48,59 +49,28 @@
     <div class="container">
       <h2>Projects</h2>
 
-      <div class="grid">
-        <!-- Home Price Predictions -->
-        <article class="card">
-          <h3>Home Price Predictions → Real Estate ML Pipeline</h3>
-          <p>Predicting U.S. home prices using <b>80k+ housing records</b> from CRMLS & Trestle API.</p>
-          <ul>
-            <li>Built a full <b>machine learning pipeline</b> for residential price prediction.</li>
-            <li>Performed <b>EDA, data cleaning, and feature engineering</b> (log transforms, interaction terms).</li>
-            <li>Tuned <b>Ridge Regression</b> & <b>Random Forest</b> models achieving <b>R² = 0.89</b> and <b>MDAPE ≈ 6%</b>.</li>
-            <li><b>Outcome:</b> Identified top pricing drivers and improved valuation transparency.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, Matplotlib, NumPy, REST APIs (Trestle/Cotality), Tableau</p>
-        </article>
-
-        <!-- TrueFork -->
-        <article class="card">
-          <h3>TrueFork → Recipe Ratings & Nutrition Bias Analysis</h3>
-          <p>Analyzing whether healthy recipes are rated differently using <b>1M+ Food.com reviews</b>.</p>
-          <ul>
-            <li>Designed an <b>end-to-end ML pipeline</b> from data ingestion to interpretation.</li>
-            <li>Engineered features from <b>text sentiment (NLTK/VADER)</b>, ingredient complexity, and nutrition facts.</li>
-            <li>Built models (Linear Regression, Random Forest, Ridge/Lasso) with <b>SHAP explainability</b>.</li>
-            <li><b>Outcome:</b> Evidence of bias against low-calorie/low-sugar foods.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, SHAP, Matplotlib, Seaborn, Jupyter</p>
-        </article>
-
-        <!-- Loan Charge-Offs -->
-        <article class="card">
-          <h3>Project Loan Charge-Offs → Credit Risk Analysis</h3>
-          <p>Predicting loan charge-offs to improve lending decisions.</p>
-          <ul>
-            <li>Engineered <b>DTI ratios, credit score groups, and loan terms</b>.</li>
-            <li>Trained <b>Logistic Regression</b>, Decision Trees, and Gradient Boosting.</li>
-            <li><b>Outcome:</b> AUC &gt; 0.80, highlighting top default predictors.</li>
-          </ul>
-          <p class="tech-stack">Tech Stack: Python, Pandas, Scikit-learn, XGBoost, Matplotlib</p>
-        </article>
-      </div> 
+      <!-- JS will inject the latest 3 here -->
+      <div class="projects grid"></div>
 
       <div style="text-align:center; margin-top:2rem;">
-        <a href="/portofolio/projects/" class="btn" style="font-weight:600;">→ View More Projects</a>
+        <a href="projects/" class="btn" style="font-weight:600;">→ View More Projects</a>
       </div>
-    </div> 
-  </section> 
+    </div>
+  </section>
 
+  <!-- GitHub stats (optional) -->
+  <section class="section bg-0">
+    <div class="container">
+      <div id="profile-stats"></div>
+    </div>
+  </section>
 
   <!-- CONTACT (scroll) -->
   <section id="contact" class="contact section bg-2">
     <div class="container">
       <h2>Contact Me</h2>
       <p>Email: <a href="mailto:sanshell@ucsd.edu">sanshell@ucsd.edu</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/stephaniepatriciaanshell" target="_blank">Stephanie Patricia Anshell</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/stephaniepatriciaanshell" target="_blank" rel="noopener">Stephanie Patricia Anshell</a></p>
     </div>
   </section>
 
@@ -112,22 +82,27 @@
   </footer>
 
   <script>
+    
     // year
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // smooth scroll for same-page hashes
-    document.querySelectorAll('a[href^="/portofolio/#"]').forEach(a => {
+  
+    // smooth scroll for same-page 
+    document.querySelectorAll('a[href^="#"], a[href^="/portofolio/#"]').forEach(a => {
       a.addEventListener('click', e => {
-        const id = a.getAttribute('href').split('#')[1];
+        const href = a.getAttribute('href');
+        const id = href.startsWith('/portofolio/#') ? href.split('#')[1] : href.slice(1);
         const el = document.getElementById(id);
         if (el) {
           e.preventDefault();
           el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          history.replaceState(null, '', '/portofolio/#' + id);
+          history.replaceState(null, '', '#' + id);
         }
       });
     });
-  </script>
+  </script>  
+
+  <!-- Scripts: order matters -->
   <script src="global.js" type="module"></script>
+  <script src="index.js" type="module" defer></script>
 </body>
 </html>
