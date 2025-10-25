@@ -122,7 +122,7 @@
       "title": "Bank Failures → Predicting Institutional Collapse",
       "year": "2023",
       "href": "https://github.com/stephaniepatriciaans/Bank-Failures/tree/main/Project_3_Bank-Failures",
-      "_image": "/images/BankFail.png",
+      "image": "/images/BankFail.png",
       "description": "Forecasting U.S. bank failures with FDIC data.",
       "points": [
         "Engineered ratios: <b>capital adequacy, asset quality, liquidity</b>.",
@@ -131,6 +131,64 @@
         "<b>Outcome:</b> Predicted failures with >80% accuracy up to 2 years ahead."
       ],
       "stack": "Python, Pandas, Scikit-learn, Matplotlib, Tableau/Seaborn"
+    },
+    {
+      "title": "StockPlayground → Quant Trading Backtester",
+      "year": "2024",
+      "href": "https://github.com/samwjya/stockplayground",
+      "image": "/images/StockPlayground.png",
+      "description": "A full-stack web app for writing, backtesting, and visualizing custom trading strategies with real historical market data.",
+      "points": [
+        "Wrote Python trading strategies directly in a browser-based Monaco Editor.",
+        "Backtested strategies against historical stock data using a FastAPI backend.",
+        "Calculated key performance metrics like Sharpe ratio, max drawdown, and win rate.",
+        "Used OpenAI API to generate trading strategy code from natural language prompts.",
+        "Visualized cumulative returns and performance with Chart.js."
+      ],
+      "stack": "React, FastAPI, Python, Pandas, Supabase, OpenAI API, Chart.js"
+    },
+    {
+    "title": "Renewable Energy → Global Impact Analysis",
+    "year": "2023",
+    "href": "https://github.com/stephaniepatriciaans/renewable_energy",
+    "image": "/images/renewable_energy.png",
+    "description": "An in-depth analysis of the relationship between renewable energy adoption, economic growth (GDP), and CO2 emissions across different countries.",
+    "points": [
+      "Analyzed global trends in renewable energy consumption from a comprehensive dataset.",
+      "Developed data visualizations in Jupyter Notebooks to explore correlations between renewable energy share, CO2 emissions, and GDP.",
+      "Created plots showing global growth in renewables and stacked bar charts comparing energy sources by country.",
+      "Investigated arguments both for and against the immediate, large-scale adoption of renewable energy sources."
+    ],
+    "stack": "Python, Pandas, Jupyter Notebook, Matplotlib, Seaborn"
+    },
+    {
+    "title": "Crowdfunding ETL → Database Pipeline",
+    "year": "2023",
+    "href": "https://github.com/stephaniepatriciaans/crowdfunding_etl",
+    "image": "/images/crowdfunding_etl.png",
+    "description": "Built a robust ETL (Extract, Transform, Load) pipeline to process and structure crowdfunding data for analysis.",
+    "points": [
+      "Extracted data from multiple sources, including CSV and Excel files, using Python and Pandas.",
+      "Transformed and cleaned the raw data by parsing dates, splitting columns, and creating new dataframes for campaigns, categories, and subcategories.",
+      "Designed a relational database schema in PostgreSQL to store the structured data efficiently.",
+      "Loaded the transformed data into the PostgreSQL database and verified the integrity of the data with SQL queries."
+    ],
+    "stack": "Python, Pandas, Jupyter Notebook, PostgreSQL, SQL"
+    },
+    {
+    "title": "Human Microbiome Dashboard → Interactive Dashboard",
+    "year": "2023",
+    "href": "https://github.com/stephaniepatriciaans/Human_Microbiome_Dashboard",
+    "image": "/images/Human_Microbiome_Dashboard.png",
+    "description": "Developed an interactive dashboard to visualize the microbial biodiversity of the human belly button, using data from a study on microbes.",
+    "points": [
+      "Loaded and parsed biodiversity data from a JSON source using D3.js to dynamically populate a dropdown menu with test subject IDs.",
+      "Created a horizontal bar chart to display the top 10 operational taxonomic units (OTUs) found in a selected individual's sample.",
+      "Designed a bubble chart to visualize the relationship between OTU ID, sample values, and OTU labels for each sample.",
+      "Implemented a gauge chart to display the weekly washing frequency of each individual, providing an engaging and informative visualization.",
+      "Built a responsive and interactive dashboard using HTML, JavaScript, and Plotly, allowing users to dynamically explore the dataset."
+    ],
+    "stack": "JavaScript, D3.js, Plotly, HTML, CSS"
     }
   ]
   

@@ -88,25 +88,6 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
 .card p{ margin:.35rem 0 .5rem; }
 .card ul{ margin:.5rem 0 1rem 1.2rem; }
 .card li{ margin:.25rem 0; }
-/* Linked headings (when a project has "href") */
-.card a > h1,
-.card a > h2,
-.card a > h3,
-.card a > h4,
-.card a > h5,
-.card a > h6{
-  color:inherit;
-  text-decoration:none;
-}
-.card a:hover > h1,
-.card a:hover > h2,
-.card a:hover > h3,
-.card a:hover > h4,
-.card a:hover > h5,
-.card a:hover > h6{
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
 .card{
   background:var(--card); padding:1.25rem; border-radius:var(--radius);
   box-shadow:var(--shadow); border:1px solid #eef2ff;
@@ -129,12 +110,22 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
 /* PROJECTS */
 .projects{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(15em,1fr));
-  gap:1.5rem; margin-block:2rem; padding:1rem;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:2rem;
+  justify-content:center;
+  justify-items:center;
+  align-items:start;
+  margin-block:2rem;
+  padding:1rem;
 }
 .projects article{
-  background:var(--card); border:1px solid #eef2ff;
-  border-radius:var(--radius); box-shadow:var(--shadow); padding:1rem;
+  background:var(--card);
+  border:1px solid #eef2ff;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:1.5rem;
+  width:100%;
+  max-width:350px;
 }
 .projects-title{
   text-align:center;
@@ -149,15 +140,47 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
 }
 :root[data-theme="dark"] .tech-stack,
 :root:not([data-theme="light"]) .tech-stack{
-  color:#cbd5e1;       /* light gray-blue text for dark mode */
+  color:#cbd5e1;
 }
 
-.projects img{ width:100%; height:auto; display:block; border-radius:.5rem }
-.projects .btn{ display:inline-block; margin-top:1rem; font-size:1rem }
-.projects-page .projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(15em,1fr));
-  gap:1.5rem; margin-block:2rem; padding:1rem;
+/* --- Project card title fixes --- */
+.projects article { display:flex; flex-direction:column; }
+
+.projects h1,
+.projects h2,
+.projects h3 {
+  font-size: clamp(1.1rem, 0.9rem + 1.2vw, 1.6rem);
+  line-height: 1.25;
+  margin: .25rem 0 .5rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: anywhere;
+}
+
+@supports (text-wrap: balance) {
+  .projects h1,
+  .projects h2,
+  .projects h3 {
+    text-wrap: balance;
+  }
+}
+
+.projects a { text-decoration: none; }
+.projects a:hover h1,
+.projects a:hover h2,
+.projects a:hover h3,
+.projects a:focus h1,
+.projects a:focus h2,
+.projects a:focus h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: .08em;
+}
+
+.projects u {
+  text-underline-offset: 4px;
+  text-decoration-thickness: .08em;
 }
 
 /* FOOTER */
