@@ -121,18 +121,44 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
   padding:1rem;
 }
 
-.projects article{
-  background:var(--card);
-  border:1px solid #eef2ff;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:1.5rem;
-  width:100%;
-  max-width:360px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
+/* --- Project content layout --- */
+.projects article {
+  background: var(--card);
+  border: 1px solid #eef2ff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-align: left;     
+  gap: 0.5rem;
+}
+
+.projects article h3 {
+  text-align: center;      
+  align-self: center;   
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+/* Bullet lists */
+.projects article ul {
+  margin: 0.25rem 0 0.5rem 1.25rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.projects article li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.projects article strong {
+  font-weight: 700;
+  color: var(--ink);
 }
 
 /* Title */
