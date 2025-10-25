@@ -60,6 +60,7 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
 .btn{
   display:inline-block; background:var(--primary); color:#fff;
   padding:.75rem 1.1rem; border-radius:var(--radius);
+  transition:filter .2s ease;
 }
 .btn:hover{ filter:brightness(.95) }
 .muted{ color: var(--muted); }
@@ -92,8 +93,9 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
   background:var(--card); padding:1.25rem; border-radius:var(--radius);
   box-shadow:var(--shadow); border:1px solid #eef2ff;
   display:flex; flex-direction:column; justify-content:space-between;
+  transition:transform .2s ease, box-shadow .2s ease;
 }
-.card:hover{ transform:translateY(-4px); transition:.2s }
+.card:hover{ transform:translateY(-4px) }
 
 /* CONTACT FORM */
 .contact-form{
@@ -107,10 +109,10 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
 }
 .contact-form button{ align-self:flex-start }
 
-/* PROJECTS */
+/* ======================= PROJECTS ======================= */
 .projects{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
   gap:2rem;
   justify-content:center;
   justify-items:center;
@@ -118,6 +120,7 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
   margin-block:2rem;
   padding:1rem;
 }
+
 .projects article{
   background:var(--card);
   border:1px solid #eef2ff;
@@ -125,13 +128,54 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
   box-shadow:var(--shadow);
   padding:1.5rem;
   width:100%;
-  max-width:350px;
+  max-width:360px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
 }
+
+/* Title */
+.projects h1,
+.projects h2,
+.projects h3{
+  font-size:clamp(1.15rem, 0.9rem + 1vw, 1.55rem);
+  font-weight:800;
+  line-height:1.22;
+  margin:.2rem 0 .6rem;
+  /* — prevent UGLY mid-word breaks — */
+  word-break:keep-all;
+  overflow-wrap:normal;
+  hyphens:auto;
+  letter-spacing:0;
+}
+
+/* Use “balanced” wrapping when available */
+@supports (text-wrap: balance){
+  .projects h1,
+  .projects h2,
+  .projects h3{ text-wrap:balance; }
+}
+
+/* Link affordance on hover/focus */
+.projects a{ text-decoration:none; }
+.projects a:hover h1,
+.projects a:hover h2,
+.projects a:hover h3,
+.projects a:focus h1,
+.projects a:focus h2,
+.projects a:focus h3{
+  text-decoration:underline;
+  text-underline-offset:4px;
+  text-decoration-thickness:.08em;
+}
+
 .projects-title{
   text-align:center;
   font-size:2.25rem;
   margin-bottom:1.25rem;
 }
+
 .tech-stack{
   font-weight:500;
   font-size:0.95rem;
@@ -141,46 +185,6 @@ h2{ text-align:center; margin-bottom:2rem; font-size:2rem }
 :root[data-theme="dark"] .tech-stack,
 :root:not([data-theme="light"]) .tech-stack{
   color:#cbd5e1;
-}
-
-/* --- Project card title fixes --- */
-.projects article { display:flex; flex-direction:column; }
-
-.projects h1,
-.projects h2,
-.projects h3 {
-  font-size: clamp(1.1rem, 0.9rem + 1.2vw, 1.6rem);
-  line-height: 1.25;
-  margin: .25rem 0 .5rem;
-  font-weight: 800;
-  overflow-wrap: anywhere;
-  word-break: normal;
-  line-break: anywhere;
-}
-
-@supports (text-wrap: balance) {
-  .projects h1,
-  .projects h2,
-  .projects h3 {
-    text-wrap: balance;
-  }
-}
-
-.projects a { text-decoration: none; }
-.projects a:hover h1,
-.projects a:hover h2,
-.projects a:hover h3,
-.projects a:focus h1,
-.projects a:focus h2,
-.projects a:focus h3 {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: .08em;
-}
-
-.projects u {
-  text-underline-offset: 4px;
-  text-decoration-thickness: .08em;
 }
 
 /* FOOTER */
