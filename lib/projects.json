@@ -1,8 +1,8 @@
 [
     {
       "title": "Home Price Predictions → Real Estate ML Pipeline",
-      "year": "2023",
-      "href": "https://github.com/stephaniepatriciaans/Home_Price_Predictions",
+      "year": "2025",
+      "href": "https://github.com/valle1306/home-price-prediction",
       "image": "/images/house_prediction.png",
       "description": "Predicting U.S. home prices using <b>80k+ housing records</b> from CRMLS & Trestle API.",
       "points": [
@@ -12,11 +12,11 @@
         "Created residual plots and feature importance visualizations for interpretability.",
         "<b>Outcome:</b> Identified top pricing drivers and improved valuation transparency."
       ],
-      "stack": "Python, Pandas, Scikit-learn, Matplotlib, NumPy, REST APIs (Trestle/Cotality), Tableau"
+      "stack": "Python, Pandas, Scikit-learn, Matplotlib, NumPy, REST APIs (Trestle/Cotality), Tableau, Streamlit, XGBoost"
     },
     {
       "title": "TrueFork → Recipe Ratings & Nutrition Bias Analysis",
-      "year": "2024",
+      "year": "2025",
       "href": "https://github.com/stephaniepatriciaans/TrueFork",
       "image": "/images/TrueFork.png",
       "description": "Analyzing whether healthy recipes are rated differently using <b>1M+ Food.com reviews</b>.",
@@ -34,7 +34,7 @@
     },
     {
       "title": "DSC 80 Project → End-to-End Predictive Modeling",
-      "year": "2023",
+      "year": "2025",
       "href": "https://github.com/stephaniepatriciaans/DSC-80-Poject",
       "image": "/images/dsc80.png",
       "description": "Course-based project showcasing the <b>full data science lifecycle</b>.",
@@ -50,7 +50,7 @@
     },
     {
       "title": "Urban Transit & Crime → Geospatial Data Science",
-      "year": "2023",
+      "year": "2025",
       "href": "https://github.com/stephaniepatriciaans/Urban-Transit-and-Crime",
       "image": "/images/urban_transit.png",
       "description": "Investigating the link between <b>public transit stops</b> and <b>crime rates</b>.",
@@ -79,7 +79,7 @@
     },
     {
       "title": "Deep Learning Challenge → CNN Image Classification",
-      "year": "2022",
+      "year": "2023",
       "href": "https://github.com/stephaniepatriciaans/deep-learning-challenge/tree/main",
       "image": "/images/deep_learning.png",
       "description": "Training neural networks to classify images in a challenge setting.",
@@ -134,7 +134,7 @@
     },
     {
       "title": "StockPlayground → Quant Trading Backtester",
-      "year": "2024",
+      "year": "2025",
       "href": "https://github.com/samwjya/stockplayground",
       "image": "/images/StockPlayground.png",
       "description": "A full-stack web app for writing, backtesting, and visualizing custom trading strategies with real historical market data.",
@@ -149,7 +149,7 @@
     },
     {
     "title": "Renewable Energy → Global Impact Analysis",
-    "year": "2023",
+    "year": "2025",
     "href": "https://github.com/stephaniepatriciaans/renewable_energy",
     "image": "/images/RenewableEnergy.png",
     "description": "An in-depth analysis of the relationship between renewable energy adoption, economic growth (GDP), and CO2 emissions across different countries.",
