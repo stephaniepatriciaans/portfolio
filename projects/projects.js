@@ -151,12 +151,12 @@ function renderPie() {
 
   // Custom color palette by year
   const colorMap = {
-    "2023": "#C2F0FF", // light blue
-    "2024": "#C5D9FF", // soft periwinkle
-    "2025": "#D9C2F0"  // lavender
+    "2023": "#C2F0FF", 
+    "2024": "#C5D9FF",
+    "2025": "#D9C2F0" 
   };
 
-  // Oordinal scale that falls back to gray if a year is missing
+  // Ordinal scale that falls back to gray if a year is missing
   const colors = d3.scaleOrdinal()
     .domain(dataForPie.map(d => d.label))
     .range(dataForPie.map(d => colorMap[d.label] || "#ccc"));
@@ -231,9 +231,7 @@ function toggleYear(yr) {
     history.replaceState(null, "", location.pathname + location.search);
   }
 
-  // Re-render list; pie (built from search-only set) remains with all wedges
-  renderCards();
-  updateSelectionStyling();
+  renderAll();
 }
 
 /* --------------------------------- Orchestrator -------------------------- */
