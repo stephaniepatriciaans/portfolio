@@ -8,15 +8,16 @@ export function $$(selector, context = document) {
 
 // Detect location --> localhost or GitHub Pages
 export const BASE_PATH =
-  (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "/" : "/portofolio/";
+  location.hostname.endsWith('github.io') ? '/portofolio/' : '/';
 
 // Automatic navigation
 const pages = [
-  { url: "",            title: "Home" },
-  { url: "projects/",   title: "Projects" },
-  { url: "contact/",    title: "Contact" },
-  { url: "cv/",         title: "CV" },
-  { url: "https://github.com/stephaniepatriciaans", title: "GitHub" }
+  {url: "", title: "Home" },
+  {url: "projects/", title: "Projects" },
+  {url: "contact/", title: "Contact" },
+  {url: "cv/", title: "CV" },
+  {url: "meta/", title: "Meta" },
+  {url: "https://github.com/stephaniepatriciaans", title: "GitHub" }
 ];
 
 // ==================== THEME SWITCHER ====================
