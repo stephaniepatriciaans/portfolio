@@ -15,13 +15,17 @@
       <div id="stats"></div>
 
       <h2>Commits by time of day</h2>
-      <p id="selection-count">No commits selected</p>
+      <!-- Toolbar row: live count + Clear selection button -->
+      <p id="selection-count" class="chart-toolbar">All commits
+        <button id="clear-btn" type="button">Clear selection</button>
+      </p>
+
       <div id="chart"></div>
 
       <h3>Language breakdown (selection)</h3>
       <dl id="language-breakdown" class="stats"></dl>
 
-      <!-- Hover tooltip -->
+      <!-- Tooltip -->
       <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
         <dd><a href="" id="commit-link" target="_blank" rel="noopener noreferrer"></a></dd>

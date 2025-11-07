@@ -331,12 +331,8 @@ function renderScatterPlot(commits) {
   svg.call(brush);
 
   // Clear selection button
-  d3.select('#selection-count')
-    .insert('button', null)
-    .text('Clear selection')
-    .style('margin-left', '0.5rem')
-    .on('click', () => svg.call(brush.move, null));
-
+  d3.select('#clear-btn').on('click', () => svg.call(brush.move, null));
+  
   // Keep tooltips working: dots above brush overlay
   svg.selectAll('.dots, .overlay ~ *').raise();
 

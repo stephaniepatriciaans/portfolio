@@ -34,6 +34,20 @@
   .selection, .overlay {fill-opacity: .12;}
   .handle {stroke: var(--fg, #111);}
 
+  /* Chart */
+  .chart-toolbar {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .25rem 0 .5rem;
+    font-weight: 600;
+  }
+  .chart-toolbar button {
+    font-weight: 500;
+    padding: .25rem .5rem;
+    border-radius: .5rem;
+  }  
+
   /* Brush selection “marching ants” */
   @keyframes marching-ants {to{stroke-dashoffset: -8; }}
   .selection {
