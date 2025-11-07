@@ -2,34 +2,40 @@
     --fg: #1f2937;
     --muted: #6b7280;
     --card: #f9fafb;
-    --accent: #2563eb;
+    --accent: #0004f8;
   }
   
-  html, body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--fg); }
-  .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
-  h1, h2, h3 { margin: 0.5rem 0 0.25rem; }
+  html, body {margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--fg);}
+  .container {max-width: 1100px; margin: 2rem auto; padding: 0 1rem;}
+  h1, h2, h3 {margin: 0.5rem 0 0.25rem;}
   
   /* Definition-list “stats” layout */
-  .stats { display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 1rem; background: var(--card); padding: 1rem; border-radius: 12px; }
-  .stats dt { color: var(--muted); font-weight: 600; }
-  .stats dd { margin: 0; }
+  .stats {display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 1rem; background: var(--card); padding: 1rem; border-radius: 12px;}
+  .stats dt {color: var(--muted); font-weight: 600;}
+  .stats dd {margin: 0;}
   
   /* Tooltip content layout */
-  dl.info { display: grid; grid-template-columns: max-content auto; gap: 0.25rem 1rem; padding: 0.75rem 1rem; border-radius: 10px; background: rgba(255,255,255,0.9); backdrop-filter: blur(6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); transition-duration: 500ms; transition-property: opacity, visibility; }
-  dl.info dt { color: var(--muted); font-weight: 600; }
-  dl.info[hidden]:not(:hover, :focus-within) { opacity: 0; visibility: hidden; }
-  .tooltip { position: fixed; top: 1em; left: 1em; }
+  dl.info {display: grid; grid-template-columns: max-content auto; gap: 0.25rem 1rem; padding: 0.75rem 1rem; border-radius: 10px; background: rgba(255,255,255,0.9); backdrop-filter: blur(6px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); transition-duration: 500ms; transition-property: opacity, visibility;}
+  dl.info dt {color: var(--muted); font-weight: 600;}
+  dl.info[hidden]:not(:hover, :focus-within) {opacity: 0; visibility: hidden;}
+  .tooltip {position: fixed; top: 1em; left: 1em;}
   
   /* Dots + hover */
-  circle { transition: 200ms; transform-origin: center; transform-box: fill-box; }
-  circle:hover { transform: scale(1.5); }
-  circle.selected { fill: #ff6b6b; }
+  circle {transition: 200ms; transform-origin: center; transform-box: fill-box;}
+  circle:hover {transform: scale(1.5);}
+  circle.selected {fill: #712bfb;}
   
   /* Gridlines (soft) */
-  .gridlines line { stroke: #d1d5db; stroke-opacity: 0.5; }
-  
+  .axis-label {font-size: 12px; fill: var(--muted);}
+  .gridlines line {stroke: var(--muted-2, #ddd); stroke-opacity: 0.6;}
+  .dots .selected {stroke: var(--fg, #111); stroke-width: 1.2;}
+  #chart {max-width: 100%; overflow: visible;}
+  #chart svg {width: 100%; height: auto;}
+  .selection, .overlay {fill-opacity: .12;}
+  .handle {stroke: var(--fg, #111);}
+
   /* Brush selection “marching ants” */
-  @keyframes marching-ants { to { stroke-dashoffset: -8; } }
+  @keyframes marching-ants {to{stroke-dashoffset: -8; }}
   .selection {
     fill-opacity: 0.1;
     stroke: black;
