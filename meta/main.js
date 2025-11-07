@@ -37,7 +37,7 @@ async function loadData() {
       length: +row.length || 0,
       datetime,
       date: new Date(datetime.toDateString()),
-      author: row.author || row.committer || '',  
+      author: row.author || row.committer || '', 
       type: row.type || row.language || 'Other', 
       time: row.time || `${String(datetime.getHours()).padStart(2, '0')}:${String(datetime.getMinutes()).padStart(2, '0')}`,
       timezone: row.timezone || 'Z',
@@ -67,7 +67,7 @@ function processCommits(data) {
         totalLines: lines.length,
       };
 
-      // keep the full lines 
+      // keep the full lines (non-enumerable so it doesn't clutter)
       Object.defineProperty(ret, 'lines', { value: lines, enumerable: false });
       return ret;
     })
@@ -209,13 +209,31 @@ function renderScatterPlot(commits) {
     .range([usable.bottom, usable.top]);
 
   // Axes
+  const [d0, d1] = xScale.domain();
+  const tickEvery = d3.timeWeek.every(1);
+  const tickDates = tickEvery.range(d3.timeDay.floor(d0), d3.timeDay.ceil(d1));
+  const fmtMonth = d3.timeFormat('%B');
+  const fmtDay   = d3.timeFormat('%a %d');
+  const labelFmt = d => (d.getDate() === 1 ? fmtMonth(d) : fmtDay(d));
+
   svg.append('g')
     .attr('transform', `translate(0,${usable.bottom})`)
-    .call(d3.axisBottom(xScale));
+    .call(
+      d3.axisBottom(xScale)
+        .tickValues(tickDates)
+        .tickFormat(labelFmt)
+        .tickSizeOuter(0)
+    )
+    .call(g => g.selectAll('text').attr('dy', '1.1em')); // little extra padding
 
   svg.append('g')
     .attr('transform', `translate(${usable.left},0)`)
-    .call(d3.axisLeft(yScale).tickFormat((d) => String(d % 24).padStart(2, '0') + ':00'));
+    .call(
+      d3.axisLeft(yScale)
+        .ticks(12) 
+        .tickFormat((d) => String(d % 24).padStart(2, '0') + ':00')
+        .tickSizeOuter(0)
+    );
 
   // Gridlines (y)
   svg.append('g')
@@ -340,7 +358,7 @@ function renderScatterPlot(commits) {
   renderSelectionCount(null);
   renderLanguageBreakdown(null);
 
-  // Restore selection from URL on load (if present)
+  // Restore selection from URL on load 
   const m = location.hash.match(/sel=([\d,]+)/);
   if (m) {
     const restored = decodeSel(m[1]);
