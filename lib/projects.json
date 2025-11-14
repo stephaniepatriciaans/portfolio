@@ -1,6 +1,6 @@
 [
   {
-    "title": "Climate Policy Dashboard → Global Greening Inequality (DSC 106 Project 3)",
+    "title": "Climate Policy Dashboard → Global Greening Inequality",
     "year": "2025",
     "href": "https://vedpanse.com/dsc-106-project-3/",
     "links": {"github": "https://github.com/VedPanse/dsc-106-project-3"},
@@ -15,7 +15,7 @@
     "stack": "HTML, CSS, JavaScript, D3.js, Data Visualization"
   },
   {
-    "title": "EV Adoption & Charging Infrastructure Panel (DSC 190)",
+    "title": "EV Adoption & Charging Infrastructure Panel",
     "year": "2025",
     "href": "#https://github.com/stephaniepatriciaans/dsc190",
     "image": "/images/ports_vs_ev_scatter.png",
