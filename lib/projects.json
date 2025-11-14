@@ -1,153 +1,197 @@
 [
-    {
-      "title": "Home Price Predictions → Real Estate ML Pipeline",
-      "year": "2025",
-      "href": "https://github.com/valle1306/home-price-prediction",
-      "image": "/images/house_prediction.png",
-      "description": "Predicting U.S. home prices using <b>80k+ housing records</b> from CRMLS & Trestle API.",
-      "points": [
-        "Built a full <b>machine learning pipeline</b> for residential price prediction.",
-        "Performed <b>EDA, data cleaning, and feature engineering</b> (log transforms, interaction terms).",
-        "Tuned <b>Ridge Regression</b> & <b>Random Forest</b> models achieving <b>R² = 0.89</b> and <b>MDAPE ≈ 6%</b>.",
-        "Created residual plots and feature importance visualizations for interpretability.",
-        "<b>Outcome:</b> Identified top pricing drivers and improved valuation transparency."
-      ],
-      "stack": "Python, Pandas, Scikit-learn, Matplotlib, NumPy, REST APIs (Trestle/Cotality), Tableau, Streamlit, XGBoost"
-    },
-    {
-      "title": "TrueFork → Recipe Ratings & Nutrition Bias Analysis",
-      "year": "2025",
-      "href": "https://github.com/stephaniepatriciaans/TrueFork",
-      "image": "/images/TrueFork.png",
-      "description": "Analyzing whether healthy recipes are rated differently using <b>1M+ Food.com reviews</b>.",
-      "points": [
-        "Designed an <b>end-to-end ML pipeline</b> from data ingestion to model interpretation.",
-        "Cleaned, normalized, and merged nutritional data with user-generated recipe reviews.",
-        "Engineered features from <b>text sentiment (NLTK/VADER)</b>, ingredient complexity, and nutrition facts.",
-        "Conducted <b>EDA</b> with visualizations (distributions, scatterplots, residual plots) to explore rating bias patterns.",
-        "Built predictive models: <b>Linear Regression, Random Forest, and Ridge/Lasso</b>.",
-        "Applied <b>SHAP interpretability</b> to identify features influencing ratings.",
-        "Performed fairness testing across nutrition-based subgroups.",
-        "<b>Outcome:</b> Identified bias against healthier recipes that suggesting perception bias users hold on low-calorie/sugar foods."
-      ],
-      "stack": "Python, Pandas, NumPy, Scikit-learn, SHAP, Matplotlib, Seaborn, Jupyter"
-    },
-    {
-      "title": "DSC 80 Project → End-to-End Predictive Modeling",
-      "year": "2025",
-      "href": "https://github.com/stephaniepatriciaans/DSC-80-Poject",
-      "image": "/images/dsc80.png",
-      "description": "Course-based project showcasing the <b>full data science lifecycle</b>.",
-      "points": [
-        "Defined a research question and selected a dataset for prediction/inference.",
-        "Performed <b>data cleaning, feature scaling, and categorical encoding</b>.",
-        "Conducted EDA with <b>summary statistics, correlation heatmaps, hypothesis testing</b>.",
-        "Trained regression and classification models (Logistic Regression, Decision Trees).",
-        "Evaluated with cross-validation and RMSE/accuracy metrics.",
-        "<b>Outcome:</b> Transparent, reproducible project demonstrating professional workflow."
-      ],
-      "stack": "Python, Babypandas/Pandas, NumPy, Scikit-learn, Matplotlib"
-    },
-    {
-      "title": "Urban Transit & Crime → Geospatial Data Science",
-      "year": "2025",
-      "href": "https://github.com/stephaniepatriciaans/Urban-Transit-and-Crime",
-      "image": "/images/urban_transit.png",
-      "description": "Investigating the link between <b>public transit stops</b> and <b>crime rates</b>.",
-      "points": [
-        "Collected and integrated <b>crime data, transit shapefiles, and census demographics</b>.",
-        "Applied <b>geospatial joins and clustering</b> using GeoPandas & PySAL.",
-        "Built <b>choropleth maps, heatmaps, cluster visualizations</b>.",
-        "Tested significance of correlation between transit hubs and crime.",
-        "<b>Outcome:</b> Identified crime clusters near transit zones, useful for city planning."
-      ],
-      "stack": "Python, GeoPandas, PySAL, Matplotlib, Folium, Jupyter"
-    },
-    {
-      "title": "Project Loan Charge-Offs → Credit Risk Analysis",
-      "year": "2023",
-      "href": "https://github.com/stephaniepatriciaans/Project-Loan-Charge-Offs",
-      "image": "/images/Loan_charges_off.png",
-      "description": "Predicting loan charge-offs to improve lending decisions.",
-      "points": [
-        "Engineered features such as <b>DTI ratios, credit score categories, and loan terms</b>.",
-        "Trained Logistic Regression, Decision Trees, and Gradient Boosting models.",
-        "Evaluated with ROC/AUC, confusion matrices, and recall analysis.",
-        "<b>Outcome:</b> Model achieved AUC > 0.80, identifying top 5 predictors of defaults."
-      ],
-      "stack": "Python, Pandas, Scikit-learn, XGBoost, Matplotlib"
-    },
-    {
-      "title": "Deep Learning Challenge → CNN Image Classification",
-      "year": "2023",
-      "href": "https://github.com/stephaniepatriciaans/deep-learning-challenge/tree/main",
-      "image": "/images/deep_learning.png",
-      "description": "Training neural networks to classify images in a challenge setting.",
-      "points": [
-        "Built <b>CNN architectures</b> in TensorFlow with data augmentation.",
-        "Used <b>dropout, batch norm, early stopping</b> to prevent overfitting.",
-        "Tuned hyperparameters (optimizer, LR, depth).",
-        "<b>Outcome:</b> Achieved >85% accuracy, beating baseline by 15%."
-      ],
-      "stack": "Python, TensorFlow, NumPy, Matplotlib"
-    },
-    {
-      "title": "Credit Risk Classification → ML for Finance",
-      "year": "2023",
-      "href": "https://github.com/stephaniepatriciaans/credit-risk-classification",
-      "image": "/images/credit_risks.png",
-      "description": "Classifying borrowers into credit risk tiers.",
-      "points": [
-        "Addressed class imbalance using SMOTE and class weights.",
-        "Benchmarked Logistic Regression, Random Forest, XGBoost.",
-        "<b>Outcome:</b> Reduced false negatives by 20%, improving lending safety."
-      ],
-      "stack": "Python, Scikit-learn, XGBoost, Pandas, Matplotlib"
-    },
-    {
-      "title": "CryptoClustering → Market Segmentation",
-      "year": "2023",
-      "href": "https://github.com/stephaniepatriciaans/CryptoClustering",
-      "image": "/images/CryptoClustering.png",
-      "description": "Clustering cryptocurrencies into meaningful groups.",
-      "points": [
-        "Engineered features: returns, volatility, moving averages.",
-        "Applied <b>K-Means, DBSCAN, Hierarchical clustering</b>.",
-        "Identified 3 groups: stablecoins, mid-cap, high-volatility coins.",
-        "<b>Outcome:</b> Helped investors diversify by risk profile."
-      ],
-      "stack": "Python, Pandas, Scikit-learn, Matplotlib, Seaborn"
-    },
-    {
-      "title": "Bank Failures → Predicting Institutional Collapse",
-      "year": "2023",
-      "href": "https://github.com/stephaniepatriciaans/Bank-Failures/tree/main/Project_3_Bank-Failures",
-      "image": "/images/BankFail.png",
-      "description": "Forecasting U.S. bank failures with FDIC data.",
-      "points": [
-        "Engineered ratios: <b>capital adequacy, asset quality, liquidity</b>.",
-        "Trained Logistic Regression, Random Forest, and ensembles.",
-        "Visualized risk scores and financial health over time.",
-        "<b>Outcome:</b> Predicted failures with >80% accuracy up to 2 years ahead."
-      ],
-      "stack": "Python, Pandas, Scikit-learn, Matplotlib, Tableau/Seaborn"
-    },
-    {
-      "title": "StockPlayground → Quant Trading Backtester",
-      "year": "2025",
-      "href": "https://github.com/samwjya/stockplayground",
-      "image": "/images/StockPlayground.png",
-      "description": "A full-stack web app for writing, backtesting, and visualizing custom trading strategies with real historical market data.",
-      "points": [
-        "Wrote Python trading strategies directly in a browser-based Monaco Editor.",
-        "Backtested strategies against historical stock data using a FastAPI backend.",
-        "Calculated key performance metrics like Sharpe ratio, max drawdown, and win rate.",
-        "Used OpenAI API to generate trading strategy code from natural language prompts.",
-        "Visualized cumulative returns and performance with Chart.js."
-      ],
-      "stack": "React, FastAPI, Python, Pandas, Supabase, OpenAI API, Chart.js"
-    },
-    {
+  {
+    "title": "Climate Policy Dashboard → Global Greening Inequality (DSC 106 Project 3)",
+    "year": "2025",
+    "href": "https://vedpanse.com/dsc-106-project-3/",
+    "links": {"github": "https://github.com/VedPanse/dsc-106-project-3"},
+    "image": "/images/global_ndvi_trend.png",
+    "description": "Interactive dashboard exploring global NDVI (vegetation greenness) trends and regional inequality in climate-driven greening.",
+    "points": [
+      "Built a policy-focused NDVI dashboard using satellite-derived vegetation data across multiple regions.",
+      "Designed linked visuals (time series + regional comparisons) to highlight differences in greening trends.",
+      "Annotated visualizations with real-world climate policy events to help non-technical viewers interpret the patterns.",
+      "Emphasized color, perception, and storytelling to align with DSC 106 design and explanation rubrics."
+    ],
+    "stack": "HTML, CSS, JavaScript, D3.js, Data Visualization"
+  },
+  {
+    "title": "EV Adoption & Charging Infrastructure Panel (DSC 190)",
+    "year": "2025",
+    "href": "#https://github.com/stephaniepatriciaans/dsc190",
+    "image": "/images/ports_vs_ev_scatter.png",
+    "description": "State–year panel analysis of electric vehicle adoption and public charging infrastructure, using multiple U.S. data sources.",
+    "points": [
+      "Merged EV registrations, charging port counts, population, and other state-level indicators into a unified panel dataset.",
+      "Engineered per-capita metrics (EVs per 1,000 people, chargers per 100k) to enable fair comparison across states.",
+      "Produced descriptive visualizations of top EV-adopting states and charger density over time.",
+      "Explored regression-style relationships between charging infrastructure and EV adoption as a first step toward causal analysis."
+    ],
+    "stack": "Python, Pandas, Data Cleaning, Panel Data, Visualization"
+  },
+  {
+    "title": "Bikewatching → Urban Cycling Patterns Visualization",
+    "year": "2025",
+    "href": "#https://github.com/stephaniepatriciaans/bikewatching",
+    "image": "/images/bikewatching_vis.png",
+    "description": "Visualization project focused on understanding patterns in bike activity and how they relate to time and place.",
+    "points": [
+      "Processed raw bike-related data into a clean, analysis-ready table suitable for visualization.",
+      "Designed charts that highlight how cycling activity varies across locations and time (e.g., daily or seasonal patterns).",
+      "Applied careful choices of color, layout, and annotation to make trends easy to interpret for non-technical viewers.",
+      "Documented design decisions to connect visual encodings back to course concepts in DSC 106."
+    ],
+    "stack": "HTML, CSS, JavaScript, D3.js (or similar visualization stack)"
+  },
+  {
+    "title": "Home Price Predictions → Real Estate ML Pipeline",
+    "year": "2025",
+    "href": "https://github.com/valle1306/home-price-prediction",
+    "image": "/images/house_prediction.png",
+    "description": "Predicting U.S. home prices using <b>80k+ housing records</b> from CRMLS & Trestle API.",
+    "points": [
+      "Built a full <b>machine learning pipeline</b> for residential price prediction.",
+      "Performed <b>EDA, data cleaning, and feature engineering</b> (log transforms, interaction terms).",
+      "Tuned <b>Ridge Regression</b> & <b>Random Forest</b> models achieving <b>R² = 0.89</b> and <b>MDAPE ≈ 6%</b>.",
+      "Created residual plots and feature importance visualizations for interpretability.",
+      "<b>Outcome:</b> Identified top pricing drivers and improved valuation transparency."
+    ],
+    "stack": "Python, Pandas, Scikit-learn, Matplotlib, NumPy, REST APIs (Trestle/Cotality), Tableau, Streamlit, XGBoost"
+  },
+  {
+    "title": "TrueFork → Recipe Ratings & Nutrition Bias Analysis",
+    "year": "2025",
+    "href": "https://stephaniepatriciaans.github.io/TrueFork/",
+    "links": {"github": "https://github.com/stephaniepatriciaans/TrueFork"},
+    "image": "/images/TrueFork.png",
+    "description": "Analyzing whether healthy recipes are rated differently using <b>1M+ Food.com reviews</b>.",
+    "points": [
+      "Designed an <b>end-to-end ML pipeline</b> from data ingestion to model interpretation.",
+      "Cleaned, normalized, and merged nutritional data with user-generated recipe reviews.",
+      "Engineered features from <b>text sentiment (NLTK/VADER)</b>, ingredient complexity, and nutrition facts.",
+      "Conducted <b>EDA</b> with visualizations (distributions, scatterplots, residual plots) to explore rating bias patterns.",
+      "Built predictive models: <b>Linear Regression, Random Forest, and Ridge/Lasso</b>.",
+      "Applied <b>SHAP interpretability</b> to identify features influencing ratings.",
+      "Performed fairness testing across nutrition-based subgroups.",
+      "<b>Outcome:</b> Identified bias against healthier recipes that suggesting perception bias users hold on low-calorie/sugar foods."
+    ],
+    "stack": "Python, Pandas, NumPy, Scikit-learn, SHAP, Matplotlib, Seaborn, Jupyter"
+  },
+  {
+    "title": "DSC 80 Project → End-to-End Predictive Modeling",
+    "year": "2025",
+    "href": "https://github.com/stephaniepatriciaans/DSC-80-Poject",
+    "image": "/images/dsc80.png",
+    "description": "Course-based project showcasing the <b>full data science lifecycle</b>.",
+    "points": [
+      "Defined a research question and selected a dataset for prediction/inference.",
+      "Performed <b>data cleaning, feature scaling, and categorical encoding</b>.",
+      "Conducted EDA with <b>summary statistics, correlation heatmaps, hypothesis testing</b>.",
+      "Trained regression and classification models (Logistic Regression, Decision Trees).",
+      "Evaluated with cross-validation and RMSE/accuracy metrics.",
+      "<b>Outcome:</b> Transparent, reproducible project demonstrating professional workflow."
+    ],
+    "stack": "Python, Babypandas/Pandas, NumPy, Scikit-learn, Matplotlib"
+  },
+  {
+    "title": "Urban Transit & Crime → Geospatial Data Science",
+    "year": "2025",
+    "href": "https://github.com/stephaniepatriciaans/Urban-Transit-and-Crime",
+    "image": "/images/urban_transit.png",
+    "description": "Investigating the link between <b>public transit stops</b> and <b>crime rates</b>.",
+    "points": [
+      "Collected and integrated <b>crime data, transit shapefiles, and census demographics</b>.",
+      "Applied <b>geospatial joins and clustering</b> using GeoPandas & PySAL.",
+      "Built <b>choropleth maps, heatmaps, cluster visualizations</b>.",
+      "Tested significance of correlation between transit hubs and crime.",
+      "<b>Outcome:</b> Identified crime clusters near transit zones, useful for city planning."
+    ],
+    "stack": "Python, GeoPandas, PySAL, Matplotlib, Folium, Jupyter"
+  },
+  {
+    "title": "Project Loan Charge-Offs → Credit Risk Analysis",
+    "year": "2023",
+    "href": "https://github.com/stephaniepatriciaans/Project-Loan-Charge-Offs",
+    "image": "/images/Loan_charges_off.png",
+    "description": "Predicting loan charge-offs to improve lending decisions.",
+    "points": [
+      "Engineered features such as <b>DTI ratios, credit score categories, and loan terms</b>.",
+      "Trained Logistic Regression, Decision Trees, and Gradient Boosting models.",
+      "Evaluated with ROC/AUC, confusion matrices, and recall analysis.",
+      "<b>Outcome:</b> Model achieved AUC > 0.80, identifying top 5 predictors of defaults."
+    ],
+    "stack": "Python, Pandas, Scikit-learn, XGBoost, Matplotlib"
+  },
+  {
+    "title": "Deep Learning Challenge → CNN Image Classification",
+    "year": "2023",
+    "href": "https://github.com/stephaniepatriciaans/deep-learning-challenge/tree/main",
+    "image": "/images/deep_learning.png",
+    "description": "Training neural networks to classify images in a challenge setting.",
+    "points": [
+      "Built <b>CNN architectures</b> in TensorFlow with data augmentation.",
+      "Used <b>dropout, batch norm, early stopping</b> to prevent overfitting.",
+      "Tuned hyperparameters (optimizer, LR, depth).",
+      "<b>Outcome:</b> Achieved >85% accuracy, beating baseline by 15%."
+    ],
+    "stack": "Python, TensorFlow, NumPy, Matplotlib"
+  },
+  {
+    "title": "Credit Risk Classification → ML for Finance",
+    "year": "2023",
+    "href": "https://github.com/stephaniepatriciaans/credit-risk-classification",
+    "image": "/images/credit_risks.png",
+    "description": "Classifying borrowers into credit risk tiers.",
+    "points": [
+      "Addressed class imbalance using SMOTE and class weights.",
+      "Benchmarked Logistic Regression, Random Forest, XGBoost.",
+      "<b>Outcome:</b> Reduced false negatives by 20%, improving lending safety."
+    ],
+    "stack": "Python, Scikit-learn, XGBoost, Pandas, Matplotlib"
+  },
+  {
+    "title": "CryptoClustering → Market Segmentation",
+    "year": "2023",
+    "href": "https://github.com/stephaniepatriciaans/CryptoClustering",
+    "image": "/images/CryptoClustering.png",
+    "description": "Clustering cryptocurrencies into meaningful groups.",
+    "points": [
+      "Engineered features: returns, volatility, moving averages.",
+      "Applied <b>K-Means, DBSCAN, Hierarchical clustering</b>.",
+      "Identified 3 groups: stablecoins, mid-cap, high-volatility coins.",
+      "<b>Outcome:</b> Helped investors diversify by risk profile."
+    ],
+    "stack": "Python, Pandas, Scikit-learn, Matplotlib, Seaborn"
+  },
+  {
+    "title": "Bank Failures → Predicting Institutional Collapse",
+    "year": "2023",
+    "href": "https://github.com/stephaniepatriciaans/Bank-Failures/tree/main/Project_3_Bank-Failures",
+    "image": "/images/BankFail.png",
+    "description": "Forecasting U.S. bank failures with FDIC data.",
+    "points": [
+      "Engineered ratios: <b>capital adequacy, asset quality, liquidity</b>.",
+      "Trained Logistic Regression, Random Forest, and ensembles.",
+      "Visualized risk scores and financial health over time.",
+      "<b>Outcome:</b> Predicted failures with >80% accuracy up to 2 years ahead."
+    ],
+    "stack": "Python, Pandas, Scikit-learn, Matplotlib, Tableau/Seaborn"
+  },
+  {
+    "title": "StockPlayground → Quant Trading Backtester",
+    "year": "2025",
+    "href": "https://github.com/samwjya/stockplayground",
+    "image": "/images/StockPlayground.png",
+    "description": "A full-stack web app for writing, backtesting, and visualizing custom trading strategies with real historical market data.",
+    "points": [
+      "Wrote Python trading strategies directly in a browser-based Monaco Editor.",
+      "Backtested strategies against historical stock data using a FastAPI backend.",
+      "Calculated key performance metrics like Sharpe ratio, max drawdown, and win rate.",
+      "Used OpenAI API to generate trading strategy code from natural language prompts.",
+      "Visualized cumulative returns and performance with Chart.js."
+    ],
+    "stack": "React, FastAPI, Python, Pandas, Supabase, OpenAI API, Chart.js"
+  },
+  {
     "title": "Renewable Energy → Global Impact Analysis",
     "year": "2025",
     "href": "https://github.com/stephaniepatriciaans/renewable_energy",
@@ -160,8 +204,8 @@
       "Investigated arguments both for and against the immediate, large-scale adoption of renewable energy sources."
     ],
     "stack": "Python, Pandas, Jupyter Notebook, Matplotlib, Seaborn"
-    },
-    {
+  },
+  {
     "title": "Crowdfunding ETL → Database Pipeline",
     "year": "2023",
     "href": "https://github.com/stephaniepatriciaans/crowdfunding_etl",
@@ -174,8 +218,8 @@
       "Loaded the transformed data into the PostgreSQL database and verified the integrity of the data with SQL queries."
     ],
     "stack": "Python, Pandas, Jupyter Notebook, PostgreSQL, SQL"
-    },
-    {
+  },
+  {
     "title": "Human Microbiome Dashboard → Interactive Dashboard",
     "year": "2023",
     "href": "https://github.com/stephaniepatriciaans/Human_Microbiome_Dashboard",
@@ -189,6 +233,5 @@
       "Built a responsive and interactive dashboard using HTML, JavaScript, and Plotly, allowing users to dynamically explore the dataset."
     ],
     "stack": "JavaScript, D3.js, Plotly, HTML, CSS"
-    }
-  ]
-  
+  }
+]
