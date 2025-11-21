@@ -1,13 +1,30 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
     <title>Repo Meta — DSC 106 Lab 8</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- main site theme + layout -->
+    <link href="../style.css" rel="stylesheet" />
+
+    <!-- meta-only tweaks -->
+    <link href="./style.css" rel="stylesheet" />
+
     <!-- main style.css is in the project root -->
     <link href="./style.css" rel="stylesheet" />
   </head>
+
   <body>
+    <!-- Theme switcher copied from your home page -->
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="theme-switcher">
+        </div>
+      </div>
+    </header>
+
     <main class="container meta-main">
       <h1>Codebase Meta</h1>
       <p>
@@ -75,10 +92,16 @@
     </main>
 
     <!-- File unit visualization -->
-    <dl id="files">
-    </dl>
+    <section class="container meta-main">
+      <h2>File changes</h2>
+      <dl id="files">
+        <!-- JS fills this -->
+      </dl>
+    </section>
 
-    <!-- JS entrypoint -->
-    <script type="module" src="./main.js"></script>
+    <!-- global theme + meta scripts -->
+    <script src="../global.js" type="module"></script>
+    <script src="./main.js" type="module"></script>
+
   </body>
 </html>
