@@ -2,33 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Repo Meta — DSC 106 Lab 6</title>
+    <title>Repo Meta — DSC 106 Lab 8</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- main style.css is in the project root -->
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
-    <main class="container">
+    <main class="container meta-main">
       <h1>Codebase Meta</h1>
-      <p>This page summarizes <code>meta/loc.csv</code> and visualizes commit activity.</p>
+      <p>
+        This page summarizes <code>meta/loc.csv</code> and visualizes commit activity.
+      </p>
 
       <h2>Summary stats</h2>
       <div id="stats"></div>
 
       <h2>Commits by time of day</h2>
-      <!-- Toolbar row: live count + Clear selection button -->
-      <p id="selection-count" class="chart-toolbar">All commits
-        <button id="clear-btn" type="button">Clear selection</button>
-      </p>
 
-      <div id="chart"></div>
+      <!-- Slider filter -->
+      <div class="commit-filter">
+        <label for="commit-progress">
+          Show commits until:
+          <input
+            type="range"
+            id="commit-progress"
+            min="0"
+            max="100"
+            value="100"
+          />
+          <time id="commit-time"></time>
+        </label>
+      </div>
 
-      <h3>Language breakdown (selection)</h3>
-      <dl id="language-breakdown" class="stats"></dl>
+      <!-- Scrollytelling layout -->
+      <div id="scrolly-1">
+        <!-- Left: story text -->
+        <div id="scatter-story"></div>
+
+        <!-- Right: sticky scatter plot + breakdown -->
+        <div id="scatter-plot">
+          <p id="selection-count" class="chart-toolbar">
+            All commits
+          </p>
+
+          <div id="chart"></div>
+
+          <h3>Language breakdown (selection)</h3>
+          <dl id="language-breakdown" class="stats"></dl>
+        </div>
+      </div>
 
       <!-- Tooltip -->
       <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
-        <dd><a href="" id="commit-link" target="_blank" rel="noopener noreferrer"></a></dd>
+        <dd>
+          <a
+            href=""
+            id="commit-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+        </dd>
         <dt>Date</dt>
         <dd id="commit-date"></dd>
         <dt>Author</dt>
@@ -36,10 +70,15 @@
         <dt>Lines edited</dt>
         <dd id="commit-lines"></dd>
         <dt>Time</dt>
-        <dd id="commit-time"></dd>
+        <dd id="commit-time-tooltip"></dd>
       </dl>
     </main>
 
+    <!-- File unit visualization -->
+    <dl id="files">
+    </dl>
+
+    <!-- JS entrypoint -->
     <script type="module" src="./main.js"></script>
   </body>
 </html>
