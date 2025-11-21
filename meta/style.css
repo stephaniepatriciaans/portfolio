@@ -306,3 +306,34 @@ dl.info[hidden]:not(:hover, :focus-within) {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Monthly calendar */
+
+   #calendar-chart {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .month-card {
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid #eef2ff;
+    padding: 1rem 1.25rem 1.25rem;
+  }
+  
+  .month-card h4 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    color: var(--primary);
+  }
+  
+  .month-card svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  

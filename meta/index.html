@@ -60,6 +60,7 @@
         <div id="scatter-plot">
           <p id="selection-count" class="chart-toolbar">
             All commits
+            <button id="clear-btn" type="button">Clear selection</button>
           </p>
 
           <div id="chart"></div>
@@ -68,6 +69,10 @@
           <dl id="language-breakdown" class="stats"></dl>
         </div>
       </div>
+
+      <!-- New calendar-style monthly breakdown -->
+      <h2>Commit calendar by month</h2>
+      <div id="calendar-chart"></div>
 
       <!-- Tooltip -->
       <dl id="commit-tooltip" class="info tooltip" hidden>

@@ -544,6 +544,117 @@ function setupScrollytelling() {
   });
 }
 
+// ============================================================
+// Calender
+// ============================================================
+function renderMonthlyCalendar(commits) {
+  const container = d3.select('#calendar-chart');
+  if (!container.node()) return;
+  container.selectAll('*').remove();
+
+  if (!commits.length) {
+    container.append('p').text('No commits to show.');
+    return;
+  }
+
+  // Group commits by year-month
+  const byMonth = d3
+    .groups(commits, (d) => {
+      const dt = d.datetime;
+      const y = dt.getFullYear();
+      const m = dt.getMonth() + 1;
+      return `${y}-${String(m).padStart(2, '0')}`; // e.g. "2025-10"
+    })
+    .sort((a, b) => d3.ascending(a[0], b[0]));
+
+  const width = 320;
+  const height = 180;
+  const margin = { top: 20, right: 10, bottom: 30, left: 40 };
+  const innerW = width - margin.left - margin.right;
+  const innerH = height - margin.top - margin.bottom;
+
+  // Y scale shared: 0..24 hours
+  const yScale = d3.scaleLinear().domain([0, 24]).range([innerH, 0]);
+
+  // Y ticks every 2 hours: 00, 02, ..., 22
+  const yTicks = d3.range(0, 24, 3);
+
+  // X = day-of-month, 1–31
+  const dayScale = d3.scaleLinear().domain([1, 31]).range([0, innerW]);
+
+  const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
+  const rScale = d3
+    .scaleSqrt()
+    .domain([minLines ?? 0, maxLines ?? 1])
+    .range([2, 10]);
+
+  const colorScale = d3
+    .scaleLinear()
+    .domain([0, 6, 12, 18, 24])
+    .range(['#4f46e5', '#6366f1', '#93c5fd', '#f59e0b', '#f97316']);
+
+  const formatMonthLabel = (key) => {
+    const [y, m] = key.split('-').map(Number);
+    const d = new Date(y, m - 1, 1);
+    return d.toLocaleString('en', { month: 'long', year: 'numeric' });
+  };
+
+  byMonth.forEach(([key, monthCommits]) => {
+    const card = container.append('section').attr('class', 'month-card');
+
+    card.append('h4').text(formatMonthLabel(key));
+
+    const svg = card
+      .append('svg')
+      .attr('viewBox', `0 0 ${width} ${height}`);
+
+    const g = svg
+      .append('g')
+      .attr('transform', `translate(${margin.left},${margin.top})`);
+
+    // Determine last day of this month (30 or 31, Feb = 28/29)
+    const [yy, mm] = key.split('-').map(Number);
+    const lastDay = new Date(yy, mm, 0).getDate();
+
+    // Base ticks: 5,10,15,20,25, plus LAST day (30 or 31 etc)
+    const baseTickDays = [5, 10, 15, 20, 25].filter((d) => d <= lastDay);
+    if (lastDay > 25) baseTickDays.push(lastDay);
+    const tickDays = [...new Set(baseTickDays)].sort((a, b) => a - b);
+
+    // X axis with day-of-month ticks
+    g.append('g')
+      .attr('transform', `translate(0,${innerH})`)
+      .call(
+        d3
+          .axisBottom(dayScale)
+          .tickValues(tickDays)
+          .tickFormat((d) => String(d).padStart(2, '0'))
+          .tickSizeOuter(0),
+      );
+
+    // Y axis 00:00, 02:00, ..., 22:00
+    g.append('g')
+      .call(
+        d3
+          .axisLeft(yScale)
+          .tickValues(yTicks)
+          .tickFormat((d) => String(d).padStart(2, '0') + ':00')
+          .tickSizeOuter(0),
+      );
+
+    // Bubbles
+    g.append('g')
+      .selectAll('circle')
+      .data(monthCommits)
+      .join('circle')
+      .attr('cx', (d) => dayScale(d.datetime.getDate()))
+      .attr('cy', (d) => yScale(d.hourFrac))
+      .attr('r', (d) => rScale(d.totalLines))
+      .attr('fill', (d) => colorScale(d.hourFrac))
+      .style('fill-opacity', 0.85);
+  });
+}
+
 
 // ============================================================
 // Boot
@@ -565,3 +676,4 @@ updateFileDisplay(filteredCommits);
 updateLanguageBreakdown(filteredCommits);
 setupSlider();
 setupScrollytelling();
+renderMonthlyCalendar(allCommits);
