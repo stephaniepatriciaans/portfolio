@@ -1,5 +1,33 @@
 [
   {
+    "title": "Neuro-Security → EEG Biometric Authentication",
+    "year": "2026",
+    "href": "https://github.com/stephaniepatriciaans/Neuro-Security",
+    "image": "/images/neuro_security.png",
+    "description": "EEG-based biometric authentication pipeline using resting-state recordings from the MOABB Lee2019_MI dataset.",
+    "points": [
+      "Built a subject-specific authentication pipeline using resting-state EEG rather than motor-imagery classification.",
+      "Extracted 310-dimensional bandpower features from 62 EEG channels across delta, theta, alpha, beta, and low-gamma bands.",
+      "Evaluated both within-session and cross-session verification to measure how biometric performance changes across days.",
+      "Automated the full workflow from data download to feature extraction, model training, and evaluation."
+    ],
+    "stack": "Python, EEG, MOABB, Signal Processing, SVM, Biometrics"
+  },
+  {
+    "title": "San Diego University Submarkets → Housing Investment Analysis",
+    "year": "2026",
+    "href": "https://github.com/stephaniepatriciaans/SD-university-submarkets-analysis",
+    "image": "/images/univ-subs-market.png",
+    "description": "Real-estate screening analysis comparing housing investment opportunities near SDSU, UCSD, and USD.",
+    "points": [
+      "Analyzed residential submarkets near SDSU, UCSD, and USD from a real estate and REIT-style investment perspective.",
+      "Compared markets using enrollment, transit, housing expansion, rent, and FHFA price data.",
+      "Built a screening model that ranked SDSU first, UCSD second, and USD third for overall investment attractiveness.",
+      "Highlighted the tradeoff between SDSU’s current investment balance and UCSD’s stronger long-term growth story."
+    ],
+    "stack": "Python, Real Estate, Finance, FHFA, Housing Data, Data Analysis"
+  },
+  {
     "title": "Climate Policy Dashboard → Global Greening Inequality",
     "year": "2025",
     "href": "https://vedpanse.com/dsc-106-project-3/",

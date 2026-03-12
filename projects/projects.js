@@ -151,9 +151,10 @@ function renderPie() {
 
   // Custom color palette by year
   const colorMap = {
-    "2023": "#C2F0FF", 
+    "2023": "#B295CF", 
     "2024": "#C5D9FF",
-    "2025": "#D9C2F0" 
+    "2025": "#4292C6",
+    "2026": "#75975E" 
   };
 
   // Ordinal scale that falls back to gray if a year is missing
