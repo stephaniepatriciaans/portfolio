@@ -1,5 +1,20 @@
 [
   {
+    "title": "UC San Diego Autonomous Racing Team",
+    "year": "2026",
+    "href": "",
+    "image": "/images/autonomous_racing.png",
+    "description": "Supported UC San Diego’s autonomous racing effort through robotics integration, ROS/Linux testing workflows, and race-track preparation for trial runs. Helped create and adapt testing tracks based on Purdue competition layouts while contributing to debugging, documentation, and collaborative development.",
+    "points": [
+      "Contributed to UC San Diego’s autonomous racing project in a collaborative robotics and autonomous systems environment.",
+      "Worked with ROS and Linux-based tooling to support integration, testing, debugging, and development workflows.",
+      "Created and adapted race-track files based on Purdue competition layouts so the team could run trial tests and practice scenarios.",
+      "Maintained technical documentation for setup, workflow handoff, and team coordination across collaborators.",
+      "Helped support reliable testing processes for autonomous vehicle software and system validation."
+    ],
+    "stack": "ROS, Linux, Python, Robotics, Autonomous Systems, Simulation"
+  },
+  {
     "title": "Neuro-Security → EEG Biometric Authentication",
     "year": "2026",
     "href": "https://github.com/stephaniepatriciaans/Neuro-Security",
