@@ -1,5 +1,20 @@
 [
   {
+    "title": "Adult Obesity Prevalence → County-Level ML Prediction",
+    "year": "2026",
+    "href": "https://github.com/stephaniepatriciaans/adult-obesity-prevalence",
+    "image": "/images/adult_obesity_prevalence.png",
+    "description": "Predicting county-level adult obesity prevalence using CDC PLACES health behavior and social/social-need indicators.",
+    "points": [
+      "Built a county-level modeling table from CDC PLACES data by filtering, standardizing, and reshaping obesity, health behavior, and social/social-need measures.",
+      "Compared Baseline, OLS, Ridge, and Lasso models with train/test splits and 5-fold cross-validation to evaluate predictive performance.",
+      "Tested whether social/social-need factors such as food insecurity, housing insecurity, and transportation barriers improve prediction beyond health behaviors alone.",
+      "Produced EDA visuals, model comparison tables, standardized coefficients, permutation feature importance, and regularization-path plots for interpretation.",
+      "Emphasized careful interpretation of observational county-level results as associations rather than causal effects."
+    ],
+    "stack": "Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Jupyter"
+  },
+  {
     "title": "UC San Diego Autonomous Racing Team",
     "year": "2026",
     "href": "",
