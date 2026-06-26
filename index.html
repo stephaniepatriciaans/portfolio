@@ -14,12 +14,12 @@
     <div class="container">
       <nav>
         <!-- global.js will rebuild these links automatically -->
-        <a href="/portofolio/#home">Home</a>
-        <a href="/portofolio/#projects">Projects</a>
-        <a href="/portofolio/projects/">Projects Page</a>
-        <a href="/portofolio/#contact">Contact</a>
-        <a href="/portofolio/contact/">Contact Page</a>
-        <a href="/portofolio/cv/">CV</a>
+        <a href="/portfolio/#home">Home</a>
+        <a href="/portfolio/#projects">Projects</a>
+        <a href="/portfolio/projects/">Projects Page</a>
+        <a href="/portfolio/#contact">Contact</a>
+        <a href="/portfolio/contact/">Contact Page</a>
+        <a href="/portfolio/cv/">CV</a>
         <a href="meta/">Meta</a>
         <a href="https://github.com/stephaniepatriciaans" target="_blank" rel="noopener">GitHub</a>
       </nav>
@@ -78,7 +78,7 @@
   <footer>
     <div class="container row">
       <p>© <span id="y"></span> Stephanie Patricia Anshell. All rights reserved.</p>
-      <p><a href="/portofolio/#home">Back to top ↑</a></p>
+      <p><a href="/portfolio/#home">Back to top ↑</a></p>
     </div>
   </footer>
 
@@ -88,10 +88,10 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   
     // smooth scroll for same-page 
-    document.querySelectorAll('a[href^="#"], a[href^="/portofolio/#"]').forEach(a => {
+    document.querySelectorAll('a[href^="#"], a[href^="/portfolio/#"]').forEach(a => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
-        const id = href.startsWith('/portofolio/#') ? href.split('#')[1] : href.slice(1);
+        const id = href.startsWith('/portfolio/#') ? href.split('#')[1] : href.slice(1);
         const el = document.getElementById(id);
         if (el) {
           e.preventDefault();

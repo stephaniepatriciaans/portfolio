@@ -66,7 +66,7 @@ function processCommits(lines) {
       const ret = {
         id: commit,
         url:
-          'https://github.com/stephaniepatriciaans/portofolio/commit/' + commit,
+          'https://github.com/stephaniepatriciaans/portfolio/commit/' + commit,
         author: first.author ?? '',
         date: first.date ?? new Date(0),
         time: first.time ?? '',

@@ -1,5 +1,5 @@
 {
-  "name": "portofolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stephaniepatriciaans/portofolio.git"
+    "url": "git+https://github.com/stephaniepatriciaans/portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stephaniepatriciaans/portofolio/issues"
+    "url": "https://github.com/stephaniepatriciaans/portfolio/issues"
   },
-  "homepage": "https://github.com/stephaniepatriciaans/portofolio#readme",
+  "homepage": "https://github.com/stephaniepatriciaans/portfolio#readme",
   "devDependencies": {
     "elocuent": "^0.0.4"
   }
