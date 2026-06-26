@@ -75,7 +75,7 @@
   {
     "title": "EV Adoption & Charging Infrastructure Panel",
     "year": "2025",
-    "href": "#https://github.com/stephaniepatriciaans/dsc190",
+    "href": "https://github.com/stephaniepatriciaans/dsc190",
     "image": "/images/ports_vs_ev_scatter.png",
     "description": "State–year panel analysis of electric vehicle adoption and public charging infrastructure, using multiple U.S. data sources.",
     "points": [
@@ -89,7 +89,7 @@
   {
     "title": "Bikewatching → Urban Cycling Patterns Visualization",
     "year": "2025",
-    "href": "#https://github.com/stephaniepatriciaans/bikewatching",
+    "href": "https://github.com/stephaniepatriciaans/bikewatching",
     "image": "/images/bikewatching_vis.png",
     "description": "Visualization project focused on understanding patterns in bike activity and how they relate to time and place.",
     "points": [

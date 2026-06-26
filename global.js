@@ -8,7 +8,7 @@ export function $$(selector, context = document) {
 
 // Detect location --> localhost or GitHub Pages
 export const BASE_PATH =
-  location.hostname.endsWith('github.io') ? '/portofolio/' : '/';
+  location.hostname.endsWith('github.io') ? '/portfolio/' : '/';
 
 // Automatic navigation
 const pages = [
