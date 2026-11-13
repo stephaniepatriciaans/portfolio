@@ -2,18 +2,49 @@
   {
     "title": "Menu Engineering Bot → Pricing & Profitability Analytics",
     "year": "2026",
-    "href": "https://github.com/stephaniepatriciaans/menu-engineering-bot",
+    "href": "https://menu-engineering-bot.streamlit.app/",
     "image": "/images/menu_engineering_bot.png",
-    "description": "Universal menu-engineering application that transforms cafe and restaurant POS data into pricing, profitability, and product-level business insights.",
+    "description": "Deployed POS analytics and pricing application processing 149K+ transactions, with robust data cleaning, leakage-safe price-elasticity backtesting, and AI decision memos.",
     "points": [
-      "Built a universal data adapter that automatically maps different CSV and POS schemas into a standardized analytics-ready dataset.",
-      "Developed a deterministic analytics engine for revenue, contribution margin, product popularity, menu-engineering quadrants, demand elasticity, and price simulation.",
-      "Designed validation and capability detection so profit-based recommendations are disabled when cost data is unavailable rather than fabricating missing business data.",
-      "Built an interactive Streamlit dashboard with configurable currencies, column mappings, pricing scenarios, and item-level recommendations.",
-      "Integrated Claude as an explanation layer that converts already-computed analytics into management memos while keeping financial calculations in Python.",
-      "Added automated tests for alternate data schemas, missing cost data, unknown product categories, and estimated-cost scenarios."
+      "Processes 149K+ POS transactions, normalizing messy exports, mixed delimiters, encodings, and refunds.",
+      "Evaluates price elasticity with leakage-safe backtesting and MAE, RMSE, and WAPE.",
+      "Uses Claude API to generate decision memos based on precomputed metrics with numerical-claim checks.",
+      "Validated with 319 automated tests."
     ],
-    "stack": "Python, Pandas, NumPy, Streamlit, Anthropic Claude API, Data Validation, Pricing Analytics, Unit Testing"
+    "stack": "Python, Pandas, NumPy, Streamlit, Anthropic Claude API, Data Validation, Pricing Analytics, Unit Testing",
+    "links": {
+      "github": "https://github.com/stephaniepatriciaans/menu-engineering-bot"
+    }
+  },
+  {
+    "title": "Urban Transit & Crime → Geospatial Data Science",
+    "year": "2025",
+    "href": "https://github.com/stephaniepatriciaans/Urban-Transit-and-Crime",
+    "image": "/images/urban_transit.png",
+    "description": "Investigating the link between <b>public transit stops</b> and <b>crime rates</b>.",
+    "points": [
+      "Collected and integrated <b>crime data, transit shapefiles, and census demographics</b>.",
+      "Applied <b>geospatial joins and clustering</b> using GeoPandas & PySAL.",
+      "Built <b>choropleth maps, heatmaps, cluster visualizations</b>.",
+      "Tested significance of correlation between transit hubs and crime.",
+      "<b>Outcome:</b> Identified crime clusters near transit zones, useful for city planning."
+    ],
+    "stack": "Python, GeoPandas, PySAL, Matplotlib, Folium, Jupyter"
+  },
+  {
+    "title": "TrueFork → Recipe Ratings & Nutrition Bias Analysis",
+    "year": "2025",
+    "href": "https://stephaniepatriciaans.github.io/TrueFork/",
+    "links": {
+      "github": "https://github.com/stephaniepatriciaans/TrueFork"
+    },
+    "image": "/images/TrueFork.png",
+    "description": "Live food-review analytics site using NLP sentiment modeling on 80K+ Food.com reviews.",
+    "points": [
+      "Built an NLP sentiment pipeline from more than 80K Food.com review records.",
+      "Validated findings through A/B testing (p < 0.05) and launched the public-facing site."
+    ],
+    "stack": "Python, Pandas, NumPy, Scikit-learn, SHAP, Matplotlib, Seaborn, Jupyter"
   },
   {
     "title": "Adult Obesity Prevalence → County-Level ML Prediction",
@@ -35,13 +66,11 @@
     "year": "2026",
     "href": "",
     "image": "/images/aks.png",
-    "description": "Supported UC San Diego’s autonomous racing effort through robotics integration, ROS/Linux testing workflows, and race-track preparation for trial runs. Helped create and adapt testing tracks based on Purdue competition layouts while contributing to debugging, documentation, and collaborative development.",
+    "description": "ROS 2 autonomous kart integration and testing on NVIDIA Jetson, contributing to a 2nd-place finish among nine teams at the 2026 Autonomous Karting Series.",
     "points": [
-      "Contributed to UC San Diego’s autonomous racing project in a collaborative robotics and autonomous systems environment.",
-      "Worked with ROS and Linux-based tooling to support integration, testing, debugging, and development workflows.",
-      "Created and adapted race-track files based on Purdue competition layouts so the team could run trial tests and practice scenarios.",
-      "Maintained technical documentation for setup, workflow handoff, and team coordination across collaborators.",
-      "Helped support reliable testing processes for autonomous vehicle software and system validation."
+      "Integrated and tested ROS 2 vehicle software on NVIDIA Jetson with Linux and Docker.",
+      "Debugged sensor and vehicle-control nodes and improved launch and testing workflows.",
+      "Helped reduce recurring pre-race integration issues during track-test sessions."
     ],
     "stack": "ROS, Linux, Python, Robotics, Autonomous Systems, Simulation"
   },
@@ -64,12 +93,9 @@
     "year": "2026",
     "href": "https://github.com/stephaniepatriciaans/SD-university-submarkets-analysis",
     "image": "/images/univ-subs-market.png",
-    "description": "Real-estate screening analysis comparing housing investment opportunities near SDSU, UCSD, and USD.",
+    "description": "Team-led, REIT-style housing investment comparison of three San Diego university submarkets.",
     "points": [
-      "Analyzed residential submarkets near SDSU, UCSD, and USD from a real estate and REIT-style investment perspective.",
-      "Compared markets using enrollment, transit, housing expansion, rent, and FHFA price data.",
-      "Built a screening model that ranked SDSU first, UCSD second, and USD third for overall investment attractiveness.",
-      "Highlighted the tradeoff between SDSU’s current investment balance and UCSD’s stronger long-term growth story."
+      "Captained a team of five to build a Python model ranking three San Diego university housing submarkets."
     ],
     "stack": "Python, Real Estate, Finance, FHFA, Housing Data, Data Analysis"
   },
@@ -77,7 +103,9 @@
     "title": "Climate Policy Dashboard → Global Greening Inequality",
     "year": "2025",
     "href": "https://vedpanse.com/dsc-106-project-3/",
-    "links": {"github": "https://github.com/VedPanse/dsc-106-project-3"},
+    "links": {
+      "github": "https://github.com/VedPanse/dsc-106-project-3"
+    },
     "image": "/images/global_ndvi_trend.png",
     "description": "Interactive dashboard exploring global NDVI (vegetation greenness) trends and regional inequality in climate-driven greening.",
     "points": [
@@ -132,25 +160,6 @@
     "stack": "Python, Pandas, Scikit-learn, Matplotlib, NumPy, REST APIs (Trestle/Cotality), Tableau, Streamlit, XGBoost"
   },
   {
-    "title": "TrueFork → Recipe Ratings & Nutrition Bias Analysis",
-    "year": "2025",
-    "href": "https://stephaniepatriciaans.github.io/TrueFork/",
-    "links": {"github": "https://github.com/stephaniepatriciaans/TrueFork"},
-    "image": "/images/TrueFork.png",
-    "description": "Analyzing whether healthy recipes are rated differently using <b>1M+ Food.com reviews</b>.",
-    "points": [
-      "Designed an <b>end-to-end ML pipeline</b> from data ingestion to model interpretation.",
-      "Cleaned, normalized, and merged nutritional data with user-generated recipe reviews.",
-      "Engineered features from <b>text sentiment (NLTK/VADER)</b>, ingredient complexity, and nutrition facts.",
-      "Conducted <b>EDA</b> with visualizations (distributions, scatterplots, residual plots) to explore rating bias patterns.",
-      "Built predictive models: <b>Linear Regression, Random Forest, and Ridge/Lasso</b>.",
-      "Applied <b>SHAP interpretability</b> to identify features influencing ratings.",
-      "Performed fairness testing across nutrition-based subgroups.",
-      "<b>Outcome:</b> Identified bias against healthier recipes that suggesting perception bias users hold on low-calorie/sugar foods."
-    ],
-    "stack": "Python, Pandas, NumPy, Scikit-learn, SHAP, Matplotlib, Seaborn, Jupyter"
-  },
-  {
     "title": "DSC 80 Project → End-to-End Predictive Modeling",
     "year": "2025",
     "href": "https://github.com/stephaniepatriciaans/DSC-80-Poject",
@@ -167,31 +176,14 @@
     "stack": "Python, Babypandas/Pandas, NumPy, Scikit-learn, Matplotlib"
   },
   {
-    "title": "Urban Transit & Crime → Geospatial Data Science",
-    "year": "2025",
-    "href": "https://github.com/stephaniepatriciaans/Urban-Transit-and-Crime",
-    "image": "/images/urban_transit.png",
-    "description": "Investigating the link between <b>public transit stops</b> and <b>crime rates</b>.",
-    "points": [
-      "Collected and integrated <b>crime data, transit shapefiles, and census demographics</b>.",
-      "Applied <b>geospatial joins and clustering</b> using GeoPandas & PySAL.",
-      "Built <b>choropleth maps, heatmaps, cluster visualizations</b>.",
-      "Tested significance of correlation between transit hubs and crime.",
-      "<b>Outcome:</b> Identified crime clusters near transit zones, useful for city planning."
-    ],
-    "stack": "Python, GeoPandas, PySAL, Matplotlib, Folium, Jupyter"
-  },
-  {
     "title": "Project Loan Charge-Offs → Credit Risk Analysis",
     "year": "2023",
     "href": "https://github.com/stephaniepatriciaans/Project-Loan-Charge-Offs",
     "image": "/images/Loan_charges_off.png",
-    "description": "Predicting loan charge-offs to improve lending decisions.",
+    "description": "Credit-card charge-off analysis across 30+ years of FRED data comparing four machine learning methods.",
     "points": [
-      "Engineered features such as <b>DTI ratios, credit score categories, and loan terms</b>.",
-      "Trained Logistic Regression, Decision Trees, and Gradient Boosting models.",
-      "Evaluated with ROC/AUC, confusion matrices, and recall analysis.",
-      "<b>Outcome:</b> Model achieved AUC > 0.80, identifying top 5 predictors of defaults."
+      "Built ETL and modeling workflows on 30+ years of FRED macroeconomic data.",
+      "Compared four machine learning methods; neural network achieved 94.9% accuracy and Random Forest achieved 93.91%."
     ],
     "stack": "Python, Pandas, Scikit-learn, XGBoost, Matplotlib"
   },

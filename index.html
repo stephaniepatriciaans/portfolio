@@ -1,88 +1,77 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark" />
-  <title>Stephanie Patricia Anshell | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<title>Stephanie Patricia Anshell | Portfolio</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container">
-      <nav>
-        <!-- global.js will rebuild these links automatically -->
-        <a href="/portfolio/#home">Home</a>
-        <a href="/portfolio/#projects">Projects</a>
-        <a href="/portfolio/projects/">Projects Page</a>
-        <a href="/portfolio/#contact">Contact</a>
-        <a href="/portfolio/contact/">Contact Page</a>
-        <a href="/portfolio/cv/">CV</a>
-        <a href="meta/">Meta</a>
-        <a href="https://github.com/stephaniepatriciaans" target="_blank" rel="noopener">GitHub</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- INTRO -->
-  <section id="home" class="hero section bg-0">
-    <div class="container hero-content">
-      <img src="images/me.png" alt="Stephanie Patricia Anshell" class="profile-img" />
-      <div>
-        <h1>Hi, I’m <span>Stephanie Patricia Anshell</span></h1>
-        <p>
-          I’m a Data Science major with a Finance minor at UC San Diego.
-          I enjoy building data-driven tools that connect analytics, finance,
-          and social impact. Fluent in English and Indonesian.
-        </p>
-        <div class="actions">
-          <a href="#projects" class="btn">View My Work</a>
-          <a href="projects/" class="btn">Open Projects Page</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS (scroll) -->
-  <section id="projects" class="section bg-1">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <!-- JS will inject the latest 3 here -->
-      <div class="projects grid"></div>
-
-      <div style="text-align:center; margin-top:2rem;">
-        <a href="projects/" class="btn" style="font-weight:600;">→ View More Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GitHub stats (optional) -->
-  <section class="section bg-0">
-    <div class="container">
-      <div id="profile-stats"></div>
-    </div>
-  </section>
-
-  <!-- CONTACT (scroll) -->
-  <section id="contact" class="contact section bg-2">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:sanshell@ucsd.edu">sanshell@ucsd.edu</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/stephaniepatriciaanshell" target="_blank" rel="noopener">Stephanie Patricia Anshell</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container row">
-      <p>© <span id="y"></span> Stephanie Patricia Anshell. All rights reserved.</p>
-      <p><a href="/portfolio/#home">Back to top ↑</a></p>
-    </div>
-  </footer>
-
-  <script>
+<!-- Navigation -->
+<header class="navbar">
+<div class="container">
+<nav>
+<!-- global.js will rebuild these links automatically -->
+<a href="/portfolio/#home">Home</a>
+<a href="/portfolio/#projects">Projects</a>
+<a href="/portfolio/projects/">Projects Page</a>
+<a href="/portfolio/#contact">Contact</a>
+<a href="/portfolio/contact/">Contact Page</a>
+<a href="/portfolio/cv/">CV</a>
+<a href="meta/">Meta</a>
+<a href="https://github.com/stephaniepatriciaans" rel="noopener" target="_blank">GitHub</a>
+</nav>
+</div>
+</header>
+<!-- INTRO -->
+<section class="hero section bg-0" id="home">
+<div class="container hero-content">
+<img alt="Stephanie Patricia Anshell" class="profile-img" src="images/me.png"/>
+<div>
+<h1>Hi, I’m <span>Stephanie Patricia Anshell</span></h1>
+<p>UC San Diego Data Science student and Finance minor, graduating in December 2026. I build machine learning pipelines, reliable data products, and analytics that inform business decisions—from 90K home sales and supply-chain forecasting to POS pricing tools, financial risk models, and autonomous racing systems.</p>
+<div class="actions">
+<a class="btn" href="#projects">View My Work</a>
+<a class="btn" href="projects/">Open Projects Page</a>
+<a class="btn" href="cv/">Explore My CV</a></div>
+</div>
+</div>
+</section>
+<!-- PROJECTS (scroll) -->
+<section class="section bg-1" id="projects">
+<div class="container">
+<h2>Projects</h2>
+<!-- JS will inject the latest 3 here -->
+<div class="projects grid"></div>
+<div style="text-align:center; margin-top:2rem;">
+<a class="btn" href="projects/" style="font-weight:600;">→ View More Projects</a>
+</div>
+</div>
+</section>
+<!-- GitHub stats (optional) -->
+<section class="section bg-0">
+<div class="container">
+<div id="profile-stats"></div>
+</div>
+</section>
+<!-- CONTACT (scroll) -->
+<section class="contact section bg-2" id="contact">
+<div class="container">
+<h2>Contact Me</h2>
+<p>Email: <a href="mailto:sanshell@ucsd.edu">sanshell@ucsd.edu</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/stephaniepatriciaanshell" rel="noopener" target="_blank">Stephanie Patricia Anshell</a></p>
+</div>
+</section>
+<footer>
+<div class="container row">
+<p>© <span id="y"></span> Stephanie Patricia Anshell. All rights reserved.</p>
+<p><a href="/portfolio/#home">Back to top ↑</a></p>
+</div>
+</footer>
+<script>
     
     // year
     document.getElementById('y').textContent = new Date().getFullYear();
@@ -100,10 +89,9 @@
         }
       });
     });
-  </script>  
-
-  <!-- Scripts: order matters -->
-  <script src="global.js" type="module"></script>
-  <script src="index.js" type="module" defer></script>
+  </script>
+<!-- Scripts: order matters -->
+<script src="global.js" type="module"></script>
+<script defer="" src="index.js" type="module"></script>
 </body>
 </html>
